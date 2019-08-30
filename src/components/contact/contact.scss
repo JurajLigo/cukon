@@ -1,0 +1,36 @@
+.footer {
+  margin-top: 8rem;
+  display: flex;
+
+  &__company {
+    width: 33%;
+  }
+
+  &__office {
+    width: 33%;
+  }
+
+  &__image {
+    width: 33%;
+  }
+
+  &__image-content {
+    height: 20rem;
+  }
+
+  &__copyright {
+    color: rgb(129, 139, 144);
+  }
+
+  &__title {
+    margin: 0;
+    margin-left: .5rem;
+    display: inline;
+    font-family: 'Audiowide', cursive;
+    font-size: 2.2rem;
+
+    &--office {
+      font-family: 'opensans-bold', sans-serif;
+    }
+  }
+}

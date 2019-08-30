@@ -1,32 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import "./contact.scss"
-import Img from "../header"
+import "./work.scss"
 
-const Contact = () => {
-
-  const data = useStaticQuery(graphql`
-    query {
-      logo: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(height: 50, width: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
+const Work = () => {
   return (
-    <footer className="footer base-container">
-      <div className="footer__company">
-        <h1 className="footer__title">
-          CUKON
-        </h1>
-        <p className="base-content">cukon@cukon.com</p>
-        <p className="base-content">0902329589</p>
-        <p className="base-content">Viedenaska 26 821 05 Bratislava</p>
+    <div className="work">
+      <article className="base-container">
+        <h1 className="title title--article">Naša práca</h1>
+        <p className="base-content">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+      </article>
       </div>
-    </footer>
   );
 }
-export default Contact
+export default Work

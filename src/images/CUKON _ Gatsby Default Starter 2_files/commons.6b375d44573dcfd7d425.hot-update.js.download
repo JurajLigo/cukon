@@ -1,0 +1,176 @@
+webpackHotUpdate("commons",{
+
+/***/ "./src/components/contact/contact.tsx":
+/*!********************************************!*\
+  !*** ./src/components/contact/contact.tsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gatsby-image */ "./node_modules/gatsby-image/index.js");
+/* harmony import */ var gatsby_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(gatsby_image__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _contact_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact.scss */ "./src/components/contact/contact.scss");
+/* harmony import */ var _contact_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_contact_scss__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\IT\\Work\\cukon\\src\\components\\contact\\contact.tsx";
+
+(function () {
+  var enterModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.enterModule : undefined;
+  enterModule && enterModule(module);
+})();
+
+var __signature__ = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default.signature : function (a) {
+  return a;
+};
+
+
+
+
+
+
+var Contact = function Contact() {
+  var officeImg = Object(gatsby__WEBPACK_IMPORTED_MODULE_1__["useStaticQuery"])("3639418796");
+  var logoImg = Object(gatsby__WEBPACK_IMPORTED_MODULE_1__["useStaticQuery"])("2222752428");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+    className: "footer base-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer__company",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "footer__title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, "CUKON"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "base-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, "cukon@cukon.com"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "base-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, "0902329589"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "base-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, "Viedenaska 26 821 05 Bratislava")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer__office",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "footer__title footer__title--office",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, "Na\u0161a kancel\xE1ria"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "base-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, "Vienna GATE"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "base-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "Viedenaska 26 821 05 Bratislava")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "footer__image",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(gatsby_image__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    fluid: officeImg.office.childImageSharp.fluid,
+    className: "footer__image-content br-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "base-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "footer__copyright base-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, "\xA9 2019, Creatix Inc., All Rights Reserved.")));
+};
+
+__signature__(Contact, "useStaticQuery{officeImg}\nuseStaticQuery{logoImg}", function () {
+  return [gatsby__WEBPACK_IMPORTED_MODULE_1__["useStaticQuery"], gatsby__WEBPACK_IMPORTED_MODULE_1__["useStaticQuery"]];
+});
+
+var _default = Contact;
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.default : undefined;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Contact, "Contact", "C:\\IT\\Work\\cukon\\src\\components\\contact\\contact.tsx");
+  reactHotLoader.register(_default, "default", "C:\\IT\\Work\\cukon\\src\\components\\contact\\contact.tsx");
+})();
+
+;
+
+(function () {
+  var leaveModule = typeof reactHotLoaderGlobal !== 'undefined' ? reactHotLoaderGlobal.leaveModule : undefined;
+  leaveModule && leaveModule(module);
+})();
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ })
+
+})
+//# sourceMappingURL=commons.6b375d44573dcfd7d425.hot-update.js.map

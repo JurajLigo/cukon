@@ -34,7 +34,7 @@ const Hero = () => {
         <h1 className="hero__title">Statika</h1>
         <h2 className="hero__subtitle">Projekčná činnosť</h2>
       </div>
-      <BackgroundImage fluid={data.placeholderImage.childImageSharp.fluid} style={{ height: `100vh`, opacity: `0.6` }}/>
+      <BackgroundImage fluid={data.placeholderImage.childImageSharp.fluid} className="hero__background"/>
     </>
     )
 }

@@ -13,7 +13,13 @@
     margin: 0 auto;
     width: 50%;
 
+  &__background {
+    height: 100vh;
+    opacity: .7 !important;
+  }
+
   &__title {
+    font-size: 4rem;
     font-family: 'opensans-bold', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2rem;
@@ -25,6 +31,7 @@
   &__subtitle {
     letter-spacing: 1rem;
     font-style: italic;
+    font-size: 2.5rem;
   }
 
 }

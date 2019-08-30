@@ -1,0 +1,49 @@
+.base-container {
+  margin: 0 auto;
+  max-width: 120rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'opensans-bold', sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: .6rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lightgray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.br-1 {
+  border-radius: 1rem;
+}
+
+.base-content {
+  font-size: 2rem;
+}
+
+.title {
+    margin: 0;
+
+    &--article {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+    }
+}
