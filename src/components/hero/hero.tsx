@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from  "gatsby-background-image"
+import "./hero.scss"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -13,12 +15,12 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
+const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+      placeholderImage: file(relativePath: { eq: "photo7.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -26,7 +28,15 @@ const Image = () => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return (
+    <>
+      <div className="hero">
+        <h1 className="hero__title">Statika</h1>
+        <h2 className="hero__subtitle">Projekčná činnosť</h2>
+      </div>
+      <BackgroundImage fluid={data.placeholderImage.childImageSharp.fluid} style={{ height: `100vh`, opacity: `0.6` }}/>
+    </>
+    )
 }
 
-export default Image
+export default Hero
