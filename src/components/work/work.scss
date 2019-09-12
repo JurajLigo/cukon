@@ -1,5 +1,19 @@
 .work {
   margin-top: 5rem;
-  background: #F9F9F9;
+  background: #E3E3E3;
   padding: 2rem 0;
+}
+
+.timeline {
+
+  &__title {
+    font-size: 2rem;
+  }
+}
+
+//override
+
+.vertical-timeline-element-icon {
+  border: 3px solid lightgray;
+  box-shadow: none;
 }

@@ -5,6 +5,20 @@ import "./contact.scss"
 
 const Contact = () => {
 
+
+  const logoImg = useStaticQuery(graphql`
+    query {
+      logoFooter: file(relativePath: { eq: "logo-footer.png" }) {
+        childImageSharp {
+          fixed(height: 30, width: 30) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
+  /**
   const officeImg = useStaticQuery(graphql`
     query {
       office: file(relativePath: { eq: "vienna.jpg" }) {
@@ -15,24 +29,16 @@ const Contact = () => {
         }
       }
     }
-  `)
+  `);
+   **/
 
-  const logoImg = useStaticQuery(graphql`
-    query {
-      logo: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(height: 50, width: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
+ // <Img fluid={officeImg.office.childImageSharp.fluid} className="footer__image-content br-1"/>
 
   return (
     <div>
       <footer className="footer base-container">
       <div className="footer__company">
+        <Img fixed={logoImg.logoFooter.childImageSharp.fixed} className="footer__logo-image" />
         <h1 className="footer__title">
           CUKON
         </h1>
@@ -46,7 +52,6 @@ const Contact = () => {
         <p className="base-content">Viedenaska 26 821 05 Bratislava</p>
       </div>
       <div className="footer__image">
-        <Img fluid={officeImg.office.childImageSharp.fluid} className="footer__image-content br-1"/>
       </div>
     </footer>
       <div className="base-container">

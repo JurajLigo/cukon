@@ -1,18 +1,82 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 import "./work.scss"
 
 const Work = () => {
+  const whiteIcon = { background: 'rgb(255, 255, 255)', color: '#fff' };
+
   return (
     <div className="work">
-      <article className="base-container">
-        <h1 className="title title--article">Naša práca</h1>
-        <p className="base-content">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </p>
-      </article>
+      <h2 className="title title--article title--center">Naša práca</h2>
+      <VerticalTimeline>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="2011 - present"
+          iconStyle={whiteIcon}
+        >
+          <h3 className="vertical-timeline-element-title timeline__title">Creative Director</h3>
+          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+          <p>
+            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="2010 - 2011"
+          iconStyle={whiteIcon}
+        >
+          <h3 className="vertical-timeline-element-title">Art Director</h3>
+          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+          <p>
+            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="2008 - 2010"
+          iconStyle={whiteIcon}
+        >
+          <h3 className="vertical-timeline-element-title">Web Designer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+          <p>
+            User Experience, Visual Design
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="2006 - 2008"
+          iconStyle={whiteIcon}
+        >
+          <h3 className="vertical-timeline-element-title">Web Designer</h3>
+          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+          <p>
+            User Experience, Visual Design
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="April 2013"
+          iconStyle={whiteIcon}
+        >
+          <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
+          <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+          <p>
+            Strategy, Social Media
+          </p>
+        </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--education"
+          date="November 2012"
+          iconStyle={whiteIcon}
+        >
+          <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
+          <h4 className="vertical-timeline-element-subtitle">Certification</h4>
+          <p>
+            Creative Direction, User Experience, Visual Design
+          </p>
+        </VerticalTimelineElement>
+      </VerticalTimeline>
       </div>
   );
 }
