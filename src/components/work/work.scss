@@ -2,18 +2,48 @@
   margin-top: 5rem;
   background: #E3E3E3;
   padding: 2rem 0;
-}
 
-.timeline {
+  //override
+  .vertical-timeline-element-icon {
+    border: 3px solid lightgray;
+    box-shadow: none;
+  }
 
-  &__title {
+  .vertical-timeline-element-title {
     font-size: 2rem;
+  }
+
+  .vertical-timeline-element-subtitle {
+    font-size: 1.3rem;
+    color: 	#696969;
+    font-style: italic;
+  }
+
+  .vertical-timeline-element-text {
+    font-size: 1.4rem;
+  }
+
+  .vertical-timeline-element-date {
+    font-size: 1.8rem !important;
+    color: black;
   }
 }
 
-//override
+.work-item {
+  display: flex;
 
-.vertical-timeline-element-icon {
-  border: 3px solid lightgray;
-  box-shadow: none;
+  &__image-wrapper {
+    width: 40%;
+    padding-right: 1rem;
+  }
+
+  &__image {
+    border-radius: .5rem;
+  }
+
+  &__text-wrapper {
+    width: 60%;
+    padding-left: 1rem;
+    font-size: 1.9rem;
+  }
 }
