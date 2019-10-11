@@ -10,10 +10,18 @@
   top: 0;
   padding: 1rem;
 
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__title {
     margin: 0 0 0 1rem;
     font-size: 3.5rem;
-    bottom: 1rem;
     position: relative;
     color: black;
     display: inline;

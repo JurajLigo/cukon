@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => {
   `)
   return (
   <header className="header">
-    <div>
+    <div className="header__logo-wrapper">
       <Img fixed={data.logo.childImageSharp.fixed}  style={{height: `50px`, width: `50px`, display: `inline-block`}}/>
       <h1 className="header__title">
         CUKON

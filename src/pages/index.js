@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import Article from "../components/article/article"
 import Contact from "../components/contact/contact"
 import Work from "../components/work/work"
+import Carousel from "../components/carousel/carousel"
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
       <Hero />
       <Article/>
       <Work/>
+      <Carousel/>
       <Contact/>
     </div>
   </Layout>

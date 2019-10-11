@@ -1,19 +1,27 @@
-.header {
+.mobile-header {
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: white;
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   z-index: 2;
   top: 0;
   padding: 1rem;
 
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__title {
     margin: 0 0 0 1rem;
-    font-size: 3.5rem;
-    bottom: 1rem;
+    font-size: 3rem;
     position: relative;
     color: black;
     display: inline;
@@ -23,15 +31,5 @@
   }
 }
 
-.navigation {
-  margin-right: 2rem;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  letter-spacing: .25rem;
-
-  &__item {
-    margin: 0;
-    padding: 0 1rem;
-    display: inline-block;
-  }
+.mobile-navigation {
 }

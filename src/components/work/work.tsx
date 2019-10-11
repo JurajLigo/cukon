@@ -2,9 +2,31 @@ import React from "react"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import "./work.scss"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 const Work = () => {
   const whiteIcon = { background: 'rgb(255, 255, 255)', color: '#fff' };
+
+  const images = useStaticQuery(graphql`
+    query {
+      bory: file(relativePath: { eq: "bory.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      house: file(relativePath: { eq: "dom1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+
 
   return (
     <div className="work">
@@ -12,70 +34,77 @@ const Work = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2011 - present"
+          date="2019"
           iconStyle={whiteIcon}
         >
-          <h3 className="vertical-timeline-element-title timeline__title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
-          </p>
+          <div className="work-item">
+            <div className="work-item__image-wrapper">
+              <Img fluid={images.bory.childImageSharp.fluid} className="work-item__image"/>
+            </div>
+              <div className="work-item__text-wrapper">
+              <h3 className="vertical-timeline-element-title">Bory</h3>
+              <h4 className="vertical-timeline-element-subtitle">Bratislava</h4>
+              <p className="vertical-timeline-element-text">
+                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+              </p>
+            </div>
+          </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2010 - 2011"
+          date="2020"
           iconStyle={whiteIcon}
         >
-          <h3 className="vertical-timeline-element-title">Art Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-          </p>
+          <div className="work-item">
+            <div className="work-item__image-wrapper">
+              <Img fluid={images.house.childImageSharp.fluid} className="work-item__image"/>
+            </div>
+            <div className="work-item__text-wrapper">
+              <h3 className="vertical-timeline-element-title">Rodinny dom</h3>
+              <h4 className="vertical-timeline-element-subtitle">Piestany</h4>
+              <p className="vertical-timeline-element-text">
+                Navrh analyza, vsetko
+              </p>
+            </div>
+          </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2008 - 2010"
+          date="2019"
           iconStyle={whiteIcon}
         >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-          <p>
-            User Experience, Visual Design
-          </p>
+          <div className="work-item">
+            <div className="work-item__image-wrapper">
+              <Img fluid={images.bory.childImageSharp.fluid} className="work-item__image"/>
+            </div>
+            <div className="work-item__text-wrapper">
+              <h3 className="vertical-timeline-element-title">Bory</h3>
+              <h4 className="vertical-timeline-element-subtitle">Bratislava</h4>
+              <p className="vertical-timeline-element-text">
+                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+              </p>
+            </div>
+          </div>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2006 - 2008"
+          date="2018"
           iconStyle={whiteIcon}
         >
-          <h3 className="vertical-timeline-element-title">Web Designer</h3>
-          <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-          <p>
-            User Experience, Visual Design
-          </p>
+          <div className="work-item">
+            <div className="work-item__image-wrapper">
+              <Img fluid={images.house.childImageSharp.fluid} className="work-item__image"/>
+            </div>
+            <div className="work-item__text-wrapper">
+              <h3 className="vertical-timeline-element-title">Rodinny dom</h3>
+              <h4 className="vertical-timeline-element-subtitle">Piestany</h4>
+              <p className="vertical-timeline-element-text">
+                Navrh analyza, vsetko
+              </p>
+            </div>
+          </div>
         </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="April 2013"
-          iconStyle={whiteIcon}
-        >
-          <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-          <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-          <p>
-            Strategy, Social Media
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="November 2012"
-          iconStyle={whiteIcon}
-        >
-          <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-          <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design
-          </p>
-        </VerticalTimelineElement>
+
       </VerticalTimeline>
       </div>
   );
