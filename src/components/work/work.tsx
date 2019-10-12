@@ -29,7 +29,7 @@ const Work = () => {
 
 
   return (
-    <div className="work">
+    <div className="work" id="our-work">
       <h2 className="title title--article title--center">Naša práca</h2>
       <VerticalTimeline>
         <VerticalTimelineElement

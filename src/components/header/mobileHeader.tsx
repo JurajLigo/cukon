@@ -31,6 +31,7 @@ export const MobileHeader = ({ siteTitle }) => {
         CUKON
       </h1>
     </div>
+    <div className="mobile-header__navigation-icon">
       <HamburgerMenu
         isOpen={isMenuOpen}
         menuClicked={menuClick}
@@ -40,6 +41,20 @@ export const MobileHeader = ({ siteTitle }) => {
         rotate={0}
         color='black'
         borderRadius={10} />
+    </div>
+    <nav className="mobile-navigation">
+      <ul className="mobile-navigation__list">
+        <li className="mobile-navigation__item">
+          O Nás
+        </li>
+        <li className="mobile-navigation__item">
+          Naša práca
+        </li>
+        <li className="mobile-navigation__item">
+          Kontakt
+        </li>
+      </ul>
+    </nav>
   </header>
   );
 }

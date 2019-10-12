@@ -2,6 +2,8 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import React from "react"
 import Img from "gatsby-image"
 import "./header.scss"
+import Scroll from 'react-scroll'
+const ScrollLink = Scroll.Link;
 
 const Header = ({ siteTitle }) => {
 
@@ -27,13 +29,23 @@ const Header = ({ siteTitle }) => {
     <nav>
       <ul className="navigation">
         <li className="navigation__item">
-          O Nás
+          <ScrollLink
+            to="about-us"
+            spy={true}
+            hashSpy={true}
+            smooth={true}
+            duration={500}
+            className="navigation__item"
+            activeClass='navigation__item--active'
+          >
+            Ahoj
+          </ScrollLink>
         </li>
         <li className="navigation__item">
-          Naša práca
+          <Link className="navigation__item" to="/#our-work">Naša práca</Link>
         </li>
         <li className="navigation__item">
-          Kontakt
+          <Link className="navigation__item" to="/blog">Kontakt</Link>
         </li>
       </ul>
     </nav>
