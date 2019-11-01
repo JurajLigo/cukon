@@ -1,3 +1,5 @@
+@import ".././variable";
+
 .header {
   position: fixed;
   display: flex;
@@ -9,6 +11,7 @@
   z-index: 2;
   top: 0;
   padding: 1rem;
+  box-shadow: 0 5px 12px -2px $darkgray;
 
   @media screen and (max-width: 768px) {
     display: none;
