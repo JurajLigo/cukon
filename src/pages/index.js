@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Element } from "react-scroll";
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Article from "../components/article/article"
+import {Article} from "../components/article/article"
 import Contact from "../components/contact/contact"
 import Work from "../components/work/work"
 import Carousel from "../components/carousel/carousel"
@@ -14,7 +14,17 @@ const IndexPage = () => (
     <SEO title="CUKON" />
     <div>
       <Hero title="STATIKA" subtitle="Projekcna cinnost" filename="photo7.jpg" />
-      <Article/>
+      <Element id="about-us" name="about-us">
+        <Article
+                 title="O nas"
+                 imagePath="team.jpg"
+                 text="We and our partners use technologies, such as cookies, and process personal data, such as IP
+                 addresses and cookie identifiers, to personalise ads and content based on your interests,
+                 measure the performance of ads and content, and derive insights about the audiences who saw ads
+                 and content. Click below to consent to the use of this technology and the processing of your personal data
+                 for these purposes. You can change your mind and change your consent choices at any time by returning to this site."
+        />
+      </Element>
       <Work/>
       <Carousel/>
       <Contact/>

@@ -1,3 +1,4 @@
+@import ".././variable";
 
 .article {
   margin-top: 8rem;
@@ -5,9 +6,19 @@
   margin-right: auto;
   display: flex;
 
+  @media screen and (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+
   &__image-wrapper {
     width: 50%;
     padding-right: 6rem;
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+      padding: 0;
+      order: 2;
+    }
   }
 
   &__image {
@@ -18,5 +29,11 @@
     width: 50%;
     padding-left: 1rem;
     font-size: 1.9rem;
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+      order: 1;
+      margin-top: 1rem;
+    }
   }
 }

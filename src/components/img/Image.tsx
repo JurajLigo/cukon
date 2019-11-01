@@ -1,13 +1,13 @@
-import { graphql, StaticQuery } from "gatsby"
-import BackgroundImage from  "gatsby-background-image"
 import * as React from "react";
-import "./hero.scss"
+import { graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image";
 
-interface HeroImageProps {
+export interface ImageProps {
+  classname: string;
   filename: string;
 }
 
-export const HeroImage = (props: HeroImageProps) => (
+export const Image = (props: ImageProps) => (
   <StaticQuery
     query={graphql`
       query {
@@ -17,7 +17,7 @@ export const HeroImage = (props: HeroImageProps) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 1200) {
+                fluid(maxWidth: 500) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -33,7 +33,7 @@ export const HeroImage = (props: HeroImageProps) => (
       });
       if (!image) { return null; }
       return (
-        <BackgroundImage fluid={image.node.childImageSharp.fluid} className="hero__background" />
+        <Img fluid={image.node.childImageSharp.fluid} className={props.classname} />
       );
     }}
   />

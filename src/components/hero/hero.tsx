@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from  "gatsby-background-image"
@@ -16,7 +16,7 @@ export const Hero = (props: HeroProps) => {
     <>
       <div className="hero">
         <h1 className="hero__title">{props.title}</h1>
-        {props.subtitle && <h2 className="hero__subtitle">Projekčná činnosť</h2>}
+        {props.subtitle && <h2 className="hero__subtitle">{props.subtitle}</h2>}
       </div>
       <HeroImage filename={props.filename} />
     </>

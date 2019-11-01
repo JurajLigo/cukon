@@ -1,40 +1,24 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
-import React from "react"
-import { Element } from 'react-scroll'
-import Img from "gatsby-image"
-import "./article.scss"
+import * as React from "react";
+import { Image } from "../img/Image";
+import "./article.scss";
 
-const Article = () => {
+export interface ArticleProps {
+  title: string;
+  text: string;
+  imagePath? :string;
+  videoPath?: string;
+}
 
-  const data = useStaticQuery(graphql`
-    query {
-      team: file(relativePath: { eq: "team.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+export const Article = (props: ArticleProps) => {
   return (
-    <Element id="about-us" name="about-us">
       <article className="article base-container">
         <div className="article__image-wrapper">
-          <Img fluid={data.team.childImageSharp.fluid} className="article__image"/>
+          <Image filename={props.imagePath} classname="article__image" />
         </div>
         <div className="article__text-wrapper">
-          <h2 className="title title--article">O nás</h2>
-          <p>
-            We and our partners use technologies, such as cookies, and process personal data, such as IP
-            addresses and cookie identifiers, to personalise ads and content based on your interests, measure
-            the performance of ads and content, and derive insights about the audiences who saw ads and content.
-            Click below to consent to the use of this technology and the processing of your personal data for these purposes.
-            You can change your mind and change your consent choices at any time by returning to this site.
-          </p>
+          <h2 className="title title--article">{props.title}</h2>
+          <p>{props.text}</p>
         </div>
       </article>
-    </Element>
   );
-}
-export default Article
+};
