@@ -1,8 +1,10 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
 import Img from "gatsby-image"
 import "./mobileHeader.scss"
 import HamburgerMenu from "react-hamburger-menu"
+
+const classNames = require('classnames');
 
 export const MobileHeader = ({ siteTitle }) => {
 
@@ -23,6 +25,11 @@ export const MobileHeader = ({ siteTitle }) => {
     setMenuOpen(!isMenuOpen);
   }
 
+  const navigationCls: any = classNames({
+    'mobile-navigation': true,
+    'mobile-navigation--hide': !isMenuOpen
+  });
+
   return (
   <header className="mobile-header">
     <div className="mobile-header__logo-wrapper">
@@ -42,7 +49,7 @@ export const MobileHeader = ({ siteTitle }) => {
         color='black'
         borderRadius={10} />
     </div>
-    <nav className="mobile-navigation">
+    <nav className={navigationCls}>
       <ul className="mobile-navigation__list">
         <li className="mobile-navigation__item">
           O Nás
