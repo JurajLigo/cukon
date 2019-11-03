@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@types/react-hamburger-menu": "0.0.3",
+    "classnames": "^2.2.6",
     "gatsby": "^2.13.73",
     "gatsby-background-image": "^0.8.5",
     "gatsby-image": "^2.2.10",

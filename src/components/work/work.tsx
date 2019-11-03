@@ -1,6 +1,6 @@
-import * as React from "react";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
+import * as React from "react"
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
+import "react-vertical-timeline-component/style.min.css"
 import "./work.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"

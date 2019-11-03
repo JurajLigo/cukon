@@ -49,7 +49,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -5px 0px 15px 1px $darkgray;
+  box-shadow: -2px 0px 12px 1px $darkgray;
+  transition: right .5s, box-shadow 1s;
+
+  &--hide {
+    right: -300px;
+  }
 
   &__list {
     list-style: none;

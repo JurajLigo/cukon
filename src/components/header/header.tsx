@@ -1,8 +1,9 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import * as React from "react";
+import * as React from "react"
 import Img from "gatsby-image"
 import "./header.scss"
-import Scroll from 'react-scroll'
+import Scroll from "react-scroll"
+
 const ScrollLink = Scroll.Link;
 
 const Header = ({ siteTitle }) => {

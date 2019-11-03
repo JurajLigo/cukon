@@ -13,7 +13,14 @@ export const Article = (props: ArticleProps) => {
   return (
       <article className="article base-container">
         <div className="article__image-wrapper">
-          <Image filename={props.imagePath} classname="article__image" />
+          {props.imagePath &&
+              <Image filename={props.imagePath} classname="article__image" />
+          }
+          {props.videoPath &&
+              <iframe className="article__video"
+                      src={props.videoPath}>
+              </iframe>
+          }
         </div>
         <div className="article__text-wrapper">
           <h2 className="title title--article">{props.title}</h2>
