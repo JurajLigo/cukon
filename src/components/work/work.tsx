@@ -4,10 +4,9 @@ import "react-vertical-timeline-component/style.min.css"
 import "./work.scss"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Work = () => {
-  const whiteIcon = { background: 'rgb(255, 255, 255)', color: '#fff' };
-
   const images = useStaticQuery(graphql`
     query {
       bory: file(relativePath: { eq: "bory.jpg" }) {
@@ -27,6 +26,8 @@ const Work = () => {
     }
   `);
 
+  const BuildingIcon = <FontAwesomeIcon className="work-item__icon" icon="building" size="2x"/>;
+  const iconBackground = { background: 'rgb(255, 255, 255)', color: '#fff' };
 
   return (
     <div className="work" id="our-work">
@@ -35,7 +36,8 @@ const Work = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2019"
-          iconStyle={whiteIcon}
+          iconStyle={iconBackground}
+          icon={BuildingIcon}
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
@@ -53,7 +55,8 @@ const Work = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2020"
-          iconStyle={whiteIcon}
+          iconStyle={iconBackground}
+          icon={BuildingIcon}
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
@@ -71,7 +74,8 @@ const Work = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2019"
-          iconStyle={whiteIcon}
+          iconStyle={iconBackground}
+          icon={BuildingIcon}
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
@@ -89,7 +93,8 @@ const Work = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           date="2018"
-          iconStyle={whiteIcon}
+          iconStyle={iconBackground}
+          icon={BuildingIcon}
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">

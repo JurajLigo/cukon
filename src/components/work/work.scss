@@ -1,3 +1,5 @@
+@import ".././variable";
+
 .work {
   margin-top: 5rem;
   background: #E3E3E3;
@@ -7,6 +9,12 @@
   .vertical-timeline-element-icon {
     border: 3px solid lightgray;
     box-shadow: none;
+
+    @media screen and (max-width: 1170px) {
+      height: 50px;
+      width: 50px;
+      left: -5px;
+    }
   }
 
   .vertical-timeline-element-title {
@@ -45,5 +53,14 @@
     width: 60%;
     padding-left: 1rem;
     font-size: 1.9rem;
+  }
+
+  &__icon {
+    color: $darkgray;
+    left: 3rem !important;
+
+    @media screen and (max-width: 1170px) {
+      left: 2.5rem !important;
+    }
   }
 }

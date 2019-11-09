@@ -15,6 +15,13 @@ const Contact = () => {
           }
         }
       }
+      office: file(relativePath: { eq: "vienna.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `);
 
@@ -52,6 +59,7 @@ const Contact = () => {
         <p className="base-content">Viedenaska 26 821 05 Bratislava</p>
       </div>
       <div className="footer__image">
+        <Img fluid={logoImg.office.childImageSharp.fluid} className="footer__logo-image" />
       </div>
     </footer>
       <div className="base-container">
