@@ -10,15 +10,27 @@ const Carousel = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      team: file(relativePath: { eq: "team.jpg" }) {
+      pezinok: file(relativePath: { eq: "pezinok.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 800) {
+          aspectRatio
+          ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      pezinok2: file(relativePath: { eq: "pezinok2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+          aspectRatio
+          ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
+
+  console.log('OUTOPUT ', data.pezinok.childImageSharp.fluid.aspectRatio);
+  console.log('OUTOPUT ', data.pezinok2.childImageSharp.fluid.aspectRatio);
 
   return (
     <div className="gallery">
@@ -27,9 +39,8 @@ const Carousel = () => {
         swipeOptions={{ continuous: false }}
         ref={el => (reactSwipeEl = el)}
       >
-        <div><Img fluid={data.team.childImageSharp.fluid} className="article__image"/></div>
-        <div>PANE 2</div>
-        <div>PANE 3</div>
+        <div><Img fluid={data.pezinok.childImageSharp.fluid} className="gallery__image gallery__image--wide"/></div>
+        <div><Img fluid={data.pezinok2.childImageSharp.fluid} className="gallery__image gallery__image--narrow"/></div>
       </ReactSwipe>
       <button onClick={() => reactSwipeEl.next()}>Next</button>
       <button onClick={() => reactSwipeEl.prev()}>Previous</button>
