@@ -13,6 +13,10 @@
     margin: 0 auto;
     width: 50%;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
   &__background {
     height: 100vh;
     filter: grayscale(100%);
@@ -27,12 +31,20 @@
     padding-bottom: 2rem;
     border-bottom: 1px solid white;
     font-weight: bolder;
+
+    @media screen and (max-width: 768px) {
+      font-size: 3rem;
+    }
   }
 
   &__subtitle {
     letter-spacing: 1rem;
     font-style: italic;
     font-size: 2.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
 }
