@@ -16,6 +16,12 @@ const IndexPage = () => {
     <Article
       text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+     g Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+      Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+     g Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+      Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+     g Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+      Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
      g"
       title="Priebeh stavby"
       videoPath="https://www.youtube.com/embed/tgbNymZ7vqY"

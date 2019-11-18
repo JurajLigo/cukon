@@ -4,6 +4,8 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { Image } from "../img/Image";
 import { useCallback, useState } from "react"
 
+import "./gallery.scss"
+
 import Pezinok from "../../images/pezinok/pezinok.jpg";
 import Pezinok1 from "../../images/pezinok/pezinok1.jpg";
 import Pezinok2 from "../../images/pezinok/pezinok2.jpg";
@@ -66,34 +68,46 @@ export const MasonryGallery = () => {
     }
   ];
 
+  const CustomFooterCount = ({ currentIndex, views }) => (
+    <div>
+      {currentIndex + 1} z {views.length}
+    </div>
+  );
+
+
   const imageRenderer = useCallback(
     ({ index, left, top, key, photo, onClick}) => (
       <div onClick={(e) => openLightbox(e, {photo, index})}
            style={{margin: '2px', height: photo.height, width: photo.width}}
       >
-        <Image filename={photo.file}   classname={""}/>
+        <Image filename={photo.file} classname={""}/>
       </div>
     ),
     []
   );
 
   return (
-    <>
-    <Gallery photos={photos} renderImage={imageRenderer}/>
-        <ModalGateway>
-        {viewerIsOpen ? (
-            <Modal onClose={closeLightbox}>
-              <Carousel
-                currentIndex={currentImage}
-                views={photos.map(x => ({
-                  ...x,
-                  caption: 'Ahoj'
-                }))}
-              />
-            </Modal>
-          ) : null}
-    </ModalGateway>
-      </>
+    <div className="second-container gallery__container">
+      <div className="gallery base-container">
+        <h2 className="title title--article gallery__title">Fotogaleria</h2>
+        <Gallery photos={photos} renderImage={imageRenderer}/>
+            <ModalGateway>
+            {viewerIsOpen ? (
+                <Modal onClose={closeLightbox}>
+                  <Carousel
+                    components={{FooterCount: CustomFooterCount}}
+                    currentIndex={currentImage}
+                    showImageCount={false}
+                    views={photos.map(x => ({
+                      ...x,
+                      caption: 'Ahoj'
+                    }))}
+                  />
+                </Modal>
+              ) : null}
+        </ModalGateway>
+        </div>
+    </div>
 
   );
 };
