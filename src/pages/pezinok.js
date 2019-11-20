@@ -8,13 +8,12 @@ import Contact from "../components/contact/contact"
 import { MasonryGallery } from "../components/gallery/gallery"
 
 const IndexPage = () => {
-
   return (
-  <Layout>
-    <SEO title="Pezinok"/>
-    <Hero title="Pezinok" subtitle="detail pezinku" filename="pezinok.jpg"/>
-    <Article
-      text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+    <Layout>
+      <SEO title="Pezinok" />
+      <Hero title="Pezinok" subtitle="detail pezinku" filename="pezinok.jpg" />
+      <Article
+        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
      g Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
@@ -23,13 +22,13 @@ const IndexPage = () => {
      g Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
      g"
-      title="Priebeh stavby"
-      videoPath="https://www.youtube.com/embed/tgbNymZ7vqY"
-    />
+        title="Priebeh stavby"
+        videoPath="https://www.youtube.com/embed/tgbNymZ7vqY"
+      />
 
-    <MasonryGallery />
-  </Layout>
-  );
+      <MasonryGallery />
+    </Layout>
+  )
 }
 
 export default IndexPage
