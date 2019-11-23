@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby"
-import React, { useState } from "react"
+import React, { useEffect, useState } from 'react'
 import Img from "gatsby-image"
 import "./mobileHeader.scss"
 import HamburgerMenu from "react-hamburger-menu"
@@ -20,6 +20,15 @@ export const MobileHeader = ({ siteTitle }) => {
       }
     }
   `)
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('open-mobile-menu');
+    } else {
+      document.body.classList.remove('open-mobile-menu');
+    }
+
+  }, [isMenuOpen]);
 
   const menuClick = () => {
     setMenuOpen(!isMenuOpen);

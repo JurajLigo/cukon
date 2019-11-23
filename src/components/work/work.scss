@@ -55,8 +55,18 @@
     font-size: 1.9rem;
   }
 
+  &__detail-link {
+    color: #696969;
+    font-size: 1.3rem;
+    padding: .2rem .8rem;
+    border-radius: .6rem;
+    text-decoration: none;
+    margin-left: 1rem;
+    background: $lightgrey;
+  }
+
   &__icon {
-    color: $darkgray;
+    color: $darkgrey;
     left: 3rem !important;
 
     @media screen and (max-width: 1170px) {

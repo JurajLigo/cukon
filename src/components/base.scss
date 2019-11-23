@@ -17,6 +17,10 @@ body {
   margin: 0;
 }
 
+.open-mobile-menu {
+  overflow: hidden;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: .6rem;

@@ -11,7 +11,7 @@
   z-index: 1;
   top: 0;
   padding: 1rem;
-  box-shadow: 0 5px 12px -2px $darkgray;
+  box-shadow: 0 5px 12px -2px $darkgrey;
 
   @media screen and (min-width: $mobile) {
     display: none;
@@ -49,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: -2px 0px 12px 1px $darkgray;
+  box-shadow: -2px 0px 12px 1px $darkgrey;
   transition: right .5s, box-shadow 1s;
 
   &--hide {

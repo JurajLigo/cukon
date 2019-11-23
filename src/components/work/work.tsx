@@ -1,10 +1,13 @@
-import * as React from "react"
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
-import "react-vertical-timeline-component/style.min.css"
-import "./work.scss"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import * as React from 'react'
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from 'react-vertical-timeline-component'
+import 'react-vertical-timeline-component/style.min.css'
+import './work.scss'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Work = () => {
   const images = useStaticQuery(graphql`
@@ -24,10 +27,12 @@ const Work = () => {
         }
       }
     }
-  `);
+  `)
 
-  const BuildingIcon = <FontAwesomeIcon className="work-item__icon" icon="building" size="2x"/>;
-  const iconBackground = { background: 'rgb(255, 255, 255)', color: '#fff' };
+  const BuildingIcon = (
+    <FontAwesomeIcon className="work-item__icon" icon="building" size="2x" />
+  )
+  const iconBackground = { background: 'rgb(255, 255, 255)', color: '#fff' }
 
   return (
     <div className="work" id="our-work">
@@ -41,13 +46,22 @@ const Work = () => {
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
-              <Img fluid={images.bory.childImageSharp.fluid} className="work-item__image"/>
+              <Link className="primary" to="/pezinok">
+                <Img
+                  fluid={images.bory.childImageSharp.fluid}
+                  className="work-item__image"
+                />
+              </Link>
             </div>
-              <div className="work-item__text-wrapper">
+            <div className="work-item__text-wrapper">
               <h3 className="vertical-timeline-element-title">Bory</h3>
               <h4 className="vertical-timeline-element-subtitle">Bratislava</h4>
               <p className="vertical-timeline-element-text">
-                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                Creative Direction, User Experience, Visual Design, Project
+                Management, Team Leading...
+                <Link className="work-item__detail-link" to="/pezinok">
+                  zisti viac
+                </Link>
               </p>
             </div>
           </div>
@@ -60,7 +74,10 @@ const Work = () => {
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
-              <Img fluid={images.house.childImageSharp.fluid} className="work-item__image"/>
+              <Img
+                fluid={images.house.childImageSharp.fluid}
+                className="work-item__image"
+              />
             </div>
             <div className="work-item__text-wrapper">
               <h3 className="vertical-timeline-element-title">Rodinny dom</h3>
@@ -79,13 +96,17 @@ const Work = () => {
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
-              <Img fluid={images.bory.childImageSharp.fluid} className="work-item__image"/>
+              <Img
+                fluid={images.bory.childImageSharp.fluid}
+                className="work-item__image"
+              />
             </div>
             <div className="work-item__text-wrapper">
               <h3 className="vertical-timeline-element-title">Bory</h3>
               <h4 className="vertical-timeline-element-subtitle">Bratislava</h4>
               <p className="vertical-timeline-element-text">
-                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                Creative Direction, User Experience, Visual Design, Project
+                Management, Team Leading
               </p>
             </div>
           </div>
@@ -98,7 +119,10 @@ const Work = () => {
         >
           <div className="work-item">
             <div className="work-item__image-wrapper">
-              <Img fluid={images.house.childImageSharp.fluid} className="work-item__image"/>
+              <Img
+                fluid={images.house.childImageSharp.fluid}
+                className="work-item__image"
+              />
             </div>
             <div className="work-item__text-wrapper">
               <h3 className="vertical-timeline-element-title">Rodinny dom</h3>
@@ -109,9 +133,8 @@ const Work = () => {
             </div>
           </div>
         </VerticalTimelineElement>
-
       </VerticalTimeline>
-      </div>
-  );
+    </div>
+  )
 }
 export default Work
