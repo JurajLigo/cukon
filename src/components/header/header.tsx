@@ -41,7 +41,7 @@ const Header = ({ siteTitle }) => {
           >
             Ahoj
           </ScrollLink>
-        </li>
+        </li>g
         <li className="navigation__item">
           <Link className="navigation__item" to="/#our-work">Naša práca</Link>
         </li>
