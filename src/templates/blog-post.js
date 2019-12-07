@@ -7,6 +7,8 @@ export default ({ data }) => {
     <Layout>
       <div>
         <h1>{post.frontmatter.title}</h1>
+        <h1>{post.frontmatter.title}</h1>
+        <h1>{post.frontmatter.title}</h1>
       </div>
     </Layout>
   )
