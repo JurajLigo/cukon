@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
-
+/**
 export default ({ data }) => {
   return (
     <Layout>
@@ -42,4 +42,4 @@ export const query = graphql`
       }
     }
   }
-`
+`**/

@@ -2,8 +2,8 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
-    if (node.internal.type === `MarkdownRemark`) {
-        const slug = createFilePath({ node, getNode, basePath: `markdown-pages` })
+    if (node.internal.type === `JsonFilesJson`) {
+        const slug = createFilePath({ node, getNode, basePath: `json-files` })
         createNodeField({
             node,
             name: `slug`,
@@ -15,25 +15,28 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allDetailsJson {
         edges {
           node {
-            fields {
-              slug
-            }
+            id
+            email
           }
         }
       }
     }
   `)
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+
+    console.log('JSON ', result);
+
+    result.data.allDetailsJson.edges.forEach(({ node }) => {
+        console.log('EMAIL ', node.email);
         createPage({
-            path: node.fields.slug,
+            path: node.id,
             component: path.resolve(`./src/templates/blog-post.js`),
             context: {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.
-                slug: node.fields.slug,
+                id: node.id,
             },
         })
     })

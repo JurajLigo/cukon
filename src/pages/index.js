@@ -10,7 +10,6 @@ import { Hero } from '../components/hero/hero'
 
 const IndexPage = () => (
   <Layout>
-    <Element name="container" id="containerElement">
       <SEO title="CUKON" />
       <div>
         <Hero
@@ -18,7 +17,6 @@ const IndexPage = () => (
           subtitle="Projekcna cinnost"
           filename="photo7.jpg"
         />
-        <Element id="about-us" name="about-us">
           <Article
             title="O nas"
             imagePath="team.jpg"
@@ -28,11 +26,7 @@ const IndexPage = () => (
                  and content. Click below to consent to the use of this technology and the processing of your personal data
                  for these purposes. You can change your mind and change your consent choices at any time by returning to this site."
           />
-        </Element>
-        <Work />
-        <Contact />
       </div>
-    </Element>
   </Layout>
 )
 

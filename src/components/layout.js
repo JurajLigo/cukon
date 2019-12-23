@@ -8,6 +8,7 @@ import "./base.scss"
 import Header from "./header/header"
 import {MobileHeader} from "./header/mobileHeader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Contact } from './contact/contact'
 
 
 library.add(faBuilding);
@@ -30,6 +31,7 @@ const Layout = ({ children }) => {
       <MobileHeader siteTitle={data.site.siteMetadata.title} />
       <div>
         <main>{children}</main>
+        <Contact />
         <footer>
         </footer>
       </div>

@@ -9,29 +9,8 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { WorkItem } from './workItem'
-
+/**
 const Work = () => {
-  /**
-  const images = useStaticQuery(graphql`
-    query {
-      bory: file(relativePath: { eq: "bory.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      house: file(relativePath: { eq: "dom1.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-   **/
-
   const workItems = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -83,3 +62,4 @@ const Work = () => {
   )
 }
 export default Work
+**/

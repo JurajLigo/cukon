@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter 2`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Cukon`,
+    description: `Cukon web page`,
+    author: `Cukon`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +36,13 @@ module.exports = {
           families: ['Audiowide']
         }
       }
+    },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/json-files/`
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
