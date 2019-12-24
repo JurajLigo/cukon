@@ -1,15 +1,38 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
-import * as React from "react"
-import Img from "gatsby-image"
-import "./header.scss"
-import Scroll from "react-scroll"
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import * as React from 'react'
+import Img, { FixedObject, FluidObject } from 'gatsby-image'
+import './header.scss'
 
-const ScrollLink = Scroll.Link;
+export interface HeaderData {
+  site: {
+    siteMetadata: {
+      title
+    }
+  }
+  logo: {
+    childImageSharp: {
+      fixed: FixedObject
+    }
+  }
+  headerJson: HeaderJsonData
+}
 
-const Header = ({ siteTitle }) => {
+export interface HeaderJsonData {
+  menuItems: {
+    aboutUs: string
+    ourWork: string
+    contact: string
+  }
+}
 
-  const data = useStaticQuery(graphql`
+export const Header = () => {
+  const data: HeaderData = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fixed(height: 50, width: 50) {
@@ -17,40 +40,40 @@ const Header = ({ siteTitle }) => {
           }
         }
       }
+      headerJson {
+        menuItems {
+          aboutUs
+          ourWork
+          contact
+        }
+      }
     }
   `)
   return (
-  <header className="header">
-    <div className="header__logo-wrapper">
-      <Img fixed={data.logo.childImageSharp.fixed}  style={{height: `50px`, width: `50px`, display: `inline-block`}}/>
-      <h1 className="header__title">
-        CUKON
-      </h1>
-    </div>
-    <nav>
-      <ul className="navigation">
-        <li className="navigation__item">
-          <ScrollLink
-            to="about-us"
-            spy={true}
-            hashSpy={true}
-            smooth={true}
-            duration={500}
-            className="navigation__item"
-            activeClass='navigation__item--active'
-          >
-            Ahoj
-          </ScrollLink>
-        </li>g
-        <li className="navigation__item">
-          <Link className="navigation__item" to="/#our-work">Naša práca</Link>
-        </li>
-        <li className="navigation__item">
-          <Link className="navigation__item" to="/blog">Kontakt</Link>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  );
+    <header className="header">
+      <div className="header__logo-wrapper">
+        <Img fixed={data.logo.childImageSharp.fixed} className="header__logo" />
+        <h1 className="header__title">{data.site.siteMetadata.title}</h1>
+      </div>
+      <nav>
+        <ul className="navigation">
+          <li className="navigation__item">
+            <Link className="navigation__item" to="/#about-us">
+              {data.headerJson.menuItems.aboutUs}
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link className="navigation__item" to="/#our-work">
+              {data.headerJson.menuItems.ourWork}
+            </Link>
+          </li>
+          <li className="navigation__item">
+            <Link className="navigation__item" to="/blog">
+              {data.headerJson.menuItems.contact}
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
-export default Header

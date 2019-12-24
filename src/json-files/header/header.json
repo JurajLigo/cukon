@@ -1,5 +1,7 @@
 {
-  "home": "Domov",
-  "ourWork": "Nasa Praca",
-  "contact": "Kontakt"
+  "menuItems": {
+    "aboutUs": "O nas",
+    "ourWork": "Nasa Praca",
+    "contact": "Kontakt"
+  }
 }

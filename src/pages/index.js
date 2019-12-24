@@ -1,5 +1,4 @@
 import React from 'react'
-import { Element } from 'react-scroll'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'

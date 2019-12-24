@@ -22,6 +22,12 @@
     align-items: center;
   }
 
+  &__logo {
+    height: 5rem;
+    width: 5rem;
+    display: inline-block;
+  }
+
   &__title {
     margin: 0 0 0 1rem;
     font-size: 3.5rem;
@@ -31,6 +37,7 @@
     font-family: 'Audiowide', cursive;
     letter-spacing: 4px;
     font-weight: bolder;
+    text-transform: uppercase;
   }
 }
 

@@ -5,7 +5,7 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import {faBuilding, faBriefcase} from '@fortawesome/free-solid-svg-icons'
 
 import "./base.scss"
-import Header from "./header/header"
+import { Header } from "./header/header"
 import {MobileHeader} from "./header/mobileHeader"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Contact } from './contact/contact'
@@ -32,8 +32,6 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <Contact />
-        <footer>
-        </footer>
       </div>
     </>
   )
