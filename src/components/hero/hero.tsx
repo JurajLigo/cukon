@@ -1,9 +1,10 @@
 import * as React from "react"
+import BackgroundImage from 'gatsby-background-image'
 import "./hero.scss"
-import { HeroImage } from "./HeroImage"
+import { FluidObject } from 'gatsby-image'
 
 interface HeroProps {
-  filename: string;
+  image: FluidObject;
   title: string;
   subtitle?: string;
 }
@@ -15,7 +16,8 @@ export const Hero = (props: HeroProps) => {
         <h1 className="hero__title">{props.title}</h1>
         {props.subtitle && <h2 className="hero__subtitle">{props.subtitle}</h2>}
       </div>
-      <HeroImage filename={props.filename} />
+      // @ts-ignore
+      <BackgroundImage fluid={props.image} className="hero__background" />
     </>
     )
 };

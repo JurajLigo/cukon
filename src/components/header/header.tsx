@@ -68,7 +68,7 @@ export const Header = () => {
             </Link>
           </li>
           <li className="navigation__item">
-            <Link className="navigation__item" to="/blog">
+            <Link className="navigation__item" to="/#contact">
               {data.headerJson.menuItems.contact}
             </Link>
           </li>

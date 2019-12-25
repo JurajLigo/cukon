@@ -78,7 +78,7 @@ export const Contact = () => {
   `)
 
   return (
-    <div>
+    <div id="contact">
       <footer className="footer base-container">
         <div className="footer__company">
           <Img

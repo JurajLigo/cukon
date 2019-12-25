@@ -1,11 +1,11 @@
 import * as React from 'react'
-import { Image } from '../img/Image'
+import Img, { FluidObject } from 'gatsby-image'
 import './article.scss'
 
 export interface ArticleProps {
   title: string
   text: string
-  imagePath?: string
+  image?: FluidObject;
   videoPath?: string
 }
 
@@ -13,8 +13,8 @@ export const Article = (props: ArticleProps) => {
   return (
     <article className="article base-container">
       <div className="article__image-wrapper">
-        {props.imagePath && (
-          <Image filename={props.imagePath} classname="article__image" />
+        {props.image && (
+          <Img fluid={props.image} className="article__image" />
         )}
         {props.videoPath && (
           <iframe className="article__video" src={props.videoPath}></iframe>

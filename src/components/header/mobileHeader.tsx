@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { useEffect, useState } from 'react'
 import * as React from 'react'
 import Img from 'gatsby-image'
@@ -75,13 +75,19 @@ export const MobileHeader = () => {
       <nav className={navigationCls}>
         <ul className="mobile-navigation__list">
           <li className="mobile-navigation__item">
-            {data.headerJson.menuItems.aboutUs}
+            <Link className="navigation__item" to="/#about-us" onClick={menuClick}>
+              {data.headerJson.menuItems.aboutUs}
+            </Link>
           </li>
           <li className="mobile-navigation__item">
-            {data.headerJson.menuItems.ourWork}
+            <Link className="navigation__item" to="/#our-work" onClick={menuClick}>
+              {data.headerJson.menuItems.ourWork}
+            </Link>
           </li>
           <li className="mobile-navigation__item">
-            {data.headerJson.menuItems.contact}
+            <Link className="navigation__item" to="/#contact" onClick={menuClick}>
+              {data.headerJson.menuItems.contact}
+            </Link>
           </li>
         </ul>
       </nav>
