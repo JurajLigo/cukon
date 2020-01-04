@@ -5,6 +5,7 @@ import { Article } from '../components/article/article'
 import { Hero } from '../components/hero/hero'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
+import Work from '../components/work/work'
 
 export interface MainPageData {
   teamImage: {
@@ -66,18 +67,21 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title={data.mainPageJson.seo} />
-      <div>
+      <>
         <Hero
           title={data.mainPageJson.hero.title}
           subtitle={data.mainPageJson.hero.subtitle}
           image={data.heroPhoto.childImageSharp.fluid}
         />
-        <Article
-          title={data.mainPageJson.aboutUs.title}
-          image={data.teamImage.childImageSharp.fluid}
-          text={data.mainPageJson.aboutUs.text}
-        />
-      </div>
+        <div id="about-us"></div>
+          <Article
+            title={data.mainPageJson.aboutUs.title}
+            image={data.teamImage.childImageSharp.fluid}
+            text={data.mainPageJson.aboutUs.text}
+          />
+        <div id="our-work"></div>
+          <Work />
+      </>
     </Layout>
   )
 }

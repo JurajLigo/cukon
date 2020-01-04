@@ -14,7 +14,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query($id: String!) {
-    detailsJson(id: { eq: $id }) {
+    detailsJson(id: { eq: $id }) {  
       email
     }
   }`

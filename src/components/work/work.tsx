@@ -9,8 +9,9 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { WorkItem } from './workItem'
-/**
+
 const Work = () => {
+  /**
   const workItems = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -33,12 +34,14 @@ const Work = () => {
   `)
 
   console.log('work items ', workItems)
+   **/
 
   const BuildingIcon = (
     <FontAwesomeIcon className="work-item__icon" icon="building" size="2x" />
   )
   const iconBackground = { background: 'rgb(255, 255, 255)', color: '#fff' }
 
+  /**
   return (
     <div className="work" id="our-work">
       <h2 className="title title--article title--center">Naša práca</h2>
@@ -60,6 +63,16 @@ const Work = () => {
       </VerticalTimeline>
     </div>
   )
+   **/
+  return (
+    <div className="work">
+      <h2 className="title title--article title--center">Naša práca</h2>
+      <VerticalTimeline>
+        <WorkItem />
+        <WorkItem />
+        <WorkItem />
+      </VerticalTimeline>
+    </div>
+  )
 }
 export default Work
-**/
