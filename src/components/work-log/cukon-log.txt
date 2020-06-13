@@ -1,0 +1,110 @@
+1 hod - zistovanie v com to urobit
+1 hod - setup gatsby so sass procesorom + typescript
+45 min - hladanie obrazkov na stranku
+45 min - graph QL vyucba ako to funguje
+45 min - hero component
+1h 30 min - hero obrazky kombinacie + article
+30 min - vymena hero obrazku
+1h 30min - rokovanie s marekom + zbavenu default layoutu
+2hod - contact
+2h - vertical timeline
+1 hod - react swipe implementacia
+
+12h
+
+
+druhy oktobrovy vikend
+1 hod - mobilne menu
+1h 30m - scrolling
+1h - parametricky hero
+30 min - pezinok detail start
+1 hod - image aby vedel dostat prop a nacitat obrazok, article responsivness
+30 min - mobile header
+15 min - video
+1 hod - font awesome + building icons 
+1 hod - gallery rozne velkosti obrazkov ako urobit
+2 hod - gallery gatsby masonry hladanie tej spravnej
+2 hod - masonry + carousel
+
+12hod
+
+1hod gallery styling
+30 min - prettier
+1h 30m - idea reinstall, viac info pre work sekciu, mobile menu neskrolovat ked je otvorene
+1h - contact icon + responsivness
+1h - how to make list of posts
+30m - gatsby all markdown nacitanie
+30m - contact cez markdown
+5h - markdown -> json data + typescript interfaces
+1h - refactoring
+2h - deploy to netflify
+
+
+
+Poznamky
+
+React-scroll nefunguje ked idem z inej stranky napr. /pezinok a chcem ist opat na o nas sekciu
+pouzijeme asi iba klasicky hash, a vyhodime react-scroll
+
+
+
+Ulohy juraj
+
+
+Ulohy marek
+- nove logo
+- fotka timu
+- text o nas
+poslat na mail
+
+Sekcia Nasa praca
+
+- 3 ikonky (dom, bytovka, viacero bytoviek)
+- link na dalsiu stranku detailu
+	fotka kde je vsade hero bude meno detailu
+	max 10 fotiek
+	budu mat fotky popisky ? Ano
+	video
+	
+- ikonky pri kontaktoch
+	
+	
+Gallery 
+
+pre obrazky z roznov velkostov
+https://quanlieu.github.io/react-image-show/
+
+
+
+Aktulane ulohy
+- prec default importy
+- stop scrolling ked som na mobile
+
+
+- Ikonky budeme dom a ta co tam je teraz (building)
+
+
+30.11. 2019
+
+Marek
+- O nas doplnit text + fotka
+- Nasa praca budeme mat 
+- Kontakt informacie, fotka kanclu, kludne aj s ludmi
+- Ked uz prejdeme na detail, priebeh stavby, youtube video
+- nove logo poslat
+
+9.6 2020 
+30min update textu, zorientovanie sa + email poslat
+
+
+13.6 2020
+1hod update contact o realne texty a restyle
+
+
+
+
+
+
+
+
+
