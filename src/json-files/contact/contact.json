@@ -1,13 +1,23 @@
 {
-  "company": {
-    "email": "cukon@cukon.com",
-    "phone": "834938948394",
-    "address": "Viedenaska 26 821 05 Bratislava"
+  "contact": {
+    "title": "Kontakt",
+    "name": "Ing. Marek Čuhák, PhD.",
+    "phone": "+421 948 504 601",
+    "email": "marek.cuhak@gmail.com"
   },
   "office": {
-    "title": "Nasa kancelaria",
+    "title": "Naša kancelária",
     "name": "Vienna Gate",
-    "address": "Viedenaska 26 821 05 Bratislava"
+    "address": "Kopčianska 10, 851 01 Bratislava – Petržalka",
+    "floor": "2.poschodie, kancelária A9"
+  },
+  "invoice": {
+    "title": "Fakturačné údaje",
+    "name": "CUKON s.r.o.",
+    "address": "Topoľčianska 19, Bratislava-Petržalka 851 01",
+    "ico": "IČO: 50 353 489",
+    "dic": "DIČ: 2120295947",
+    "icdph": "IČ DPH: SK2120295947"
   },
   "copyright": "© 2020, Cukon., All Rights Reserved."
 }

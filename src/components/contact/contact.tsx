@@ -26,15 +26,25 @@ export interface ContactData {
 }
 
 export interface ContactTextData {
-  company: {
-    email: string
-    phone: string
-    address: string
+  contact: {
+    title: string;
+    name: string;
+    phone: string;
+    email: string;
   }
   office: {
-    title: string
-    name: string
-    address: string
+    title: string;
+    name: string;
+    address: string;
+    floor: string;
+  }
+  invoice: {
+    title: string;
+    name: string;
+    address: string;
+    ico: string;
+    dic: string;
+    icdph: string;
   }
   copyright: string
 }
@@ -62,15 +72,25 @@ export const Contact = () => {
         }
       }
       contactJson {
-        company {
-          email
+        contact {
+          title
+          name
           phone
-          address
+          email
         }
         office {
           title
           name
           address
+          floor
+        }
+        invoice {
+          title
+          name
+          address
+          ico
+          dic
+          icdph
         }
         copyright
       }
@@ -78,20 +98,28 @@ export const Contact = () => {
   `)
 
   return (
-    <div id="contact">
-      <footer className="footer base-container">
-        <div className="footer__company">
-          <Img
-            fixed={data.logoFooter.childImageSharp.fixed}
-            className="footer__logo-image"
-          />
-          <h1 className="footer__title">{data.site.siteMetadata.title}</h1>
-          <p className="base-content">{data.contactJson.company.email}</p>
-          <p className="base-content">{data.contactJson.company.phone}</p>
-          <p className="base-content">{data.contactJson.company.address}</p>
+    <div id="contact" className="base-container footer">
+      <Img
+        fixed={data.logoFooter.childImageSharp.fixed}
+        className="footer__logo-image"
+      />
+      <h1 className="footer__logo-title">{data.site.siteMetadata.title}</h1>
+      <footer className="footer__content">
+        <div className="footer__contact">
+          <h3 className="footer__content-title">
+            <FontAwesomeIcon
+              className="footer__icon"
+              icon="phone"
+              size="1x"
+            />
+            {data.contactJson.contact.title}
+          </h3>
+          <p className="base-content">{data.contactJson.contact.name}</p>
+          <p className="base-content">{data.contactJson.contact.phone}</p>
+          <p className="base-content">{data.contactJson.contact.email}</p>
         </div>
         <div className="footer__office">
-          <h3 className="footer__title footer__title--office">
+          <h3 className="footer__content-title">
             <FontAwesomeIcon
               className="footer__icon"
               icon="briefcase"
@@ -101,12 +129,22 @@ export const Contact = () => {
           </h3>
           <p className="base-content">{data.contactJson.office.name}</p>
           <p className="base-content">{data.contactJson.office.address}</p>
+          <p className="base-content">{data.contactJson.office.floor}</p>
         </div>
-        <div className="footer__image">
-          <Img
-            fluid={data.officePhoto.childImageSharp.fluid}
-            className="br-1 footer__logo-image"
-          />
+        <div className="footer__invoice">
+          <h3 className="footer__content-title">
+            <FontAwesomeIcon
+              className="footer__icon"
+              icon="file-invoice"
+              size="1x"
+            />
+            {data.contactJson.invoice.title}
+          </h3>
+          <p className="base-content">{data.contactJson.invoice.name}</p>
+          <p className="base-content">{data.contactJson.invoice.address}</p>
+          <p className="base-content">{data.contactJson.invoice.ico}</p>
+          <p className="base-content">{data.contactJson.invoice.dic}</p>
+          <p className="base-content">{data.contactJson.invoice.icdph}</p>
         </div>
       </footer>
       <div className="base-container">

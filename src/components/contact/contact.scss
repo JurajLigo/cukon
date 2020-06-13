@@ -2,12 +2,19 @@
 
 .footer {
   margin-top: 8rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   padding: 1rem;
 
-  &__company {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__content-title {
+    font-size: 2rem;
+  }
+
+  &__contact {
     padding: 1rem;
   }
 
@@ -15,20 +22,21 @@
     vertical-align: bottom;
   }
 
+  &__logo-title {
+    margin: 0;
+    margin-left: .5rem;
+    display: inline;
+    font-family: 'Audiowide', cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
   &__office {
     padding: 1rem;
   }
 
-  &__image {
-    width: 33%;
-
-    @media screen and (max-width: $mobile) {
-      width: 100%;
-    }
-  }
-
-  &__image-content {
-    height: 20rem;
+  &__invoice {
+    padding: 1rem;
   }
 
   &__copyright {
@@ -38,20 +46,5 @@
 
   &__icon {
     margin-right: .6rem;
-  }
-
-  &__title {
-    margin: 0;
-    margin-left: .5rem;
-    display: inline;
-    font-family: 'Audiowide', cursive;
-    font-size: 2.2rem;
-    text-transform: uppercase;
-
-    &--office {
-      margin-left: 0;
-      font-family: 'opensans-bold', sans-serif;
-      text-transform: none;
-    }
   }
 }
