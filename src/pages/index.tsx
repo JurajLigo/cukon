@@ -77,7 +77,7 @@ const IndexPage = () => {
           <Article
             title={data.mainPageJson.aboutUs.title}
             image={data.teamImage.childImageSharp.fluid}
-            text={data.mainPageJson.aboutUs.text}
+            content={data.mainPageJson.aboutUs.text}
           />
         <div id="our-work"></div>
           <Work />

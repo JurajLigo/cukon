@@ -29,6 +29,8 @@
 
   .vertical-timeline-element-text {
     font-size: 1.4rem;
+    margin: .5rem;
+    padding: 0;
   }
 
   .vertical-timeline-element-date {
@@ -63,7 +65,6 @@
     padding: .2rem .8rem;
     border-radius: .6rem;
     text-decoration: none;
-    margin-left: 1rem;
     background: $lightgrey;
   }
 

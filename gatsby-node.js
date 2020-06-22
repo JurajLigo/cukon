@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
-            email
+            resourceName
           }
         }
       }
@@ -29,9 +29,8 @@ exports.createPages = async ({ graphql, actions }) => {
     console.log('JSON ', result);
 
     result.data.allDetailsJson.edges.forEach(({ node }) => {
-        console.log('EMAIL ', node.email);
         createPage({
-            path: node.id,
+            path: node.resourceName,
             component: path.resolve(`./src/templates/blog-post.js`),
             context: {
                 // Data passed to context is available

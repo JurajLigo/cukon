@@ -8,7 +8,12 @@ import Bory from '../../images/bory.jpg'
 import './work.scss'
 import 'react-vertical-timeline-component/style.min.css'
 
-export interface WorkItemProps {}
+export interface WorkItemProps {
+  name: string;
+  year: string;
+  location: string;
+  architect: string;
+}
 
 export const WorkItem = (props: WorkItemProps) => {
   const BuildingIcon = (
@@ -31,15 +36,16 @@ export const WorkItem = (props: WorkItemProps) => {
           </Link>
         </div>
         <div className="work-item__text-wrapper">
-          <h3 className="vertical-timeline-element-title">Bory</h3>
-          <h4 className="vertical-timeline-element-subtitle">Bratislava</h4>
+          <h3 className="vertical-timeline-element-title">Bory bývanie 3. fáza </h3>
           <p className="vertical-timeline-element-text">
-            Creative Direction, User Experience, Visual Design, Project
-            Management, Team Leading...
-            <Link className="work-item__detail-link" to="/pezinok">
-              zisti viac
-            </Link>
+            Lokalita: Bratislava
           </p>
+          <p className="vertical-timeline-element-text">
+            Architekt: Sadovsky & Architects
+          </p>
+          <Link className="work-item__detail-link" to="/pezinok">
+            Detail
+          </Link>
         </div>
       </div>
     </VerticalTimelineElement>

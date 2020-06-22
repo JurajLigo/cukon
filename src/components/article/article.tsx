@@ -4,7 +4,7 @@ import './article.scss'
 
 export interface ArticleProps {
   title: string
-  text: string
+  content: React.ReactNode;
   image?: FluidObject;
   videoPath?: string
 }
@@ -22,7 +22,7 @@ export const Article = (props: ArticleProps) => {
       </div>
       <div className="article__text-wrapper">
         <h2 className="title title--article">{props.title}</h2>
-        <p>{props.text}</p>
+        <p>{props.content}</p>
       </div>
     </article>
   )

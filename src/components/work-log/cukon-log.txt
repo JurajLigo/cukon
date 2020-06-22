@@ -102,6 +102,18 @@ Marek
 
 
 
+Ako urobit dynamicke stranky
+pozriet gatsby-node.js a potom a details stade sa to berie a potom este treba pozriet
+
+
+10.6
+1h 30 min - konzultacia + dynamicky model na generovanie detailov
+
+22.6
+45 min - priprava na dynamicky model + zakladny stub pre generovanie detailov
+
+
+
 
 
 
