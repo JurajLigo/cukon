@@ -13,9 +13,12 @@ export interface WorkItemProps {
   year: string;
   location: string;
   architect: string;
+  resourceName: string;
 }
 
 export const WorkItem = (props: WorkItemProps) => {
+  const {name, year, location, architect, resourceName} = props;
+
   const BuildingIcon = (
     <FontAwesomeIcon className="work-item__icon" icon="building" size="2x" />
   )
@@ -25,25 +28,25 @@ export const WorkItem = (props: WorkItemProps) => {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"
-      date="2019"
+      date={year}
       iconStyle={iconBackground}
       icon={BuildingIcon}
     >
       <div className="work-item">
         <div className="work-item__image-wrapper">
-          <Link className="primary" to="/pezinok">
+          <Link className="primary" to={`/${resourceName}`}>
             <img src={Bory} className="work-item__image" />
           </Link>
         </div>
         <div className="work-item__text-wrapper">
-          <h3 className="vertical-timeline-element-title">Bory bývanie 3. fáza </h3>
+          <h3 className="vertical-timeline-element-title">{name}</h3>
           <p className="vertical-timeline-element-text">
-            Lokalita: Bratislava
+            {location}
           </p>
           <p className="vertical-timeline-element-text">
-            Architekt: Sadovsky & Architects
+           {architect}
           </p>
-          <Link className="work-item__detail-link" to="/pezinok">
+          <Link className="work-item__detail-link" to={`/${resourceName}`}>
             Detail
           </Link>
         </div>

@@ -12,10 +12,35 @@ import Pezinok2 from '../../images/pezinok/pezinok2.jpg'
 import Pezinok3 from '../../images/pezinok/pezinok3.jpg'
 import Pezinok4 from '../../images/pezinok/pezinok4.jpg'
 import Pezinok5 from '../../images/pezinok/pezinok5.jpg'
+import { graphql, useStaticQuery } from 'gatsby'
 
 export const MasonryGallery = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "pezinok" }
+      }
+    ) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`)
+
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
+
+  console.log('images ', data);
 
   const openLightbox = useCallback((event, { photo, index }) => {
     console.log('ahoj')
@@ -32,50 +57,98 @@ export const MasonryGallery = () => {
     {
       file: 'pezinok/pezinok.jpg',
       src: Pezinok,
-      width: 3648,
-      height: 2736,
+      width: 4,
+      height: 3,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok1.jpg',
       src: Pezinok1,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok2.jpg',
       src: Pezinok2,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok3.jpg',
       src: Pezinok3,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok4.jpg',
       src: Pezinok4,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok5.jpg',
       src: Pezinok5,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok2.jpg',
       src: Pezinok2,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
     {
       file: 'pezinok/pezinok3.jpg',
       src: Pezinok3,
-      width: 2736,
-      height: 3648,
+      width: 3,
+      height: 4,
+      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
+        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
     },
   ]
 
@@ -112,6 +185,7 @@ export const MasonryGallery = () => {
                 views={photos.map(x => ({
                   ...x,
                   caption: 'Ahoj',
+                  srcSet: x.srcSet
                 }))}
               />
             </Modal>
