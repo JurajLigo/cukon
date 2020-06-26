@@ -29,6 +29,7 @@ export interface WorkItemDetail {
   name: string
   location: string
   architect: string
+  imageForList: string
 }
 
 const Work = () => {
@@ -43,6 +44,7 @@ const Work = () => {
             name
             location
             architect
+            imageForList
           }
         }
       }
@@ -65,6 +67,7 @@ const Work = () => {
             location={node.node.location}
             name={node.node.name}
             resourceName={node.node.resourceName}
+            imageForList={node.node.imageForList}
           />
         ))}
       </VerticalTimeline>

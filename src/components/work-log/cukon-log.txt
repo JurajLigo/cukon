@@ -111,6 +111,10 @@ pozriet gatsby-node.js a potom a details stade sa to berie a potom este treba po
 
 22.6
 45 min - priprava na dynamicky model + zakladny stub pre generovanie detailov
+b
+24.6 1h30m - nacitavanie detailov projektov na hlavnej stranke dynamicky
+
+26.6 30m - pridanie obrazku dynamicky do nasej prace
 
 
 

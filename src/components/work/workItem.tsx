@@ -3,10 +3,10 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { VerticalTimelineElement } from 'react-vertical-timeline-component'
-import Bory from '../../images/bory.jpg'
 
 import './work.scss'
 import 'react-vertical-timeline-component/style.min.css'
+import { Image } from '../img/Image'
 
 export interface WorkItemProps {
   name: string;
@@ -14,10 +14,11 @@ export interface WorkItemProps {
   location: string;
   architect: string;
   resourceName: string;
+  imageForList: string;
 }
 
 export const WorkItem = (props: WorkItemProps) => {
-  const {name, year, location, architect, resourceName} = props;
+  const {name, year, location, architect, resourceName, imageForList} = props;
 
   const BuildingIcon = (
     <FontAwesomeIcon className="work-item__icon" icon="building" size="2x" />
@@ -35,7 +36,7 @@ export const WorkItem = (props: WorkItemProps) => {
       <div className="work-item">
         <div className="work-item__image-wrapper">
           <Link className="primary" to={`/${resourceName}`}>
-            <img src={Bory} className="work-item__image" />
+            <Image filename={imageForList} classname='work-item__image' />
           </Link>
         </div>
         <div className="work-item__text-wrapper">

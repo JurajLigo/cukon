@@ -11,7 +11,7 @@ export const Image = (props: ImageProps) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile {
+        images: allFile(filter: {extension: {regex: "/(jpg)|(jpeg)|(png)/"}}) {
           edges {
             node {
               relativePath
@@ -29,6 +29,7 @@ export const Image = (props: ImageProps) => (
 
     render={(data) => {
       const image = data.images.edges.find(n => {
+        console.log('image ',n);
         return n.node.relativePath.includes(props.filename);
       });
       if (!image) { return null; }
