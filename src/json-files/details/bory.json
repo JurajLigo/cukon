@@ -4,5 +4,17 @@
   "name": "Bory bývanie 3. fáza",
   "location": "Lokalita: Bratislava",
   "architect": "Architekt: Sadovsky & Architects",
-  "imageForList": "bory.jpg"
+  "imageForList": "bory.jpg",
+  "video": "https://www.youtube.com/embed/6qN6ejdqEhc",
+  "descriptions": [
+    {
+      "value": "a"
+    },
+    {
+      "value": "b"
+    },
+    {
+      "value": "c"
+    }
+  ]
 }
