@@ -2,6 +2,7 @@ import * as React from 'react'
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Article } from '../components/article/article'
+import { Hero } from '../components/hero/hero'
 
 export interface DetailData {
   data: {
@@ -10,7 +11,7 @@ export interface DetailData {
       location: string;
       video: string;
       architect: string;
-      description: DescriptionItem[]
+      descriptions: DescriptionItem[]
     }
   }
 }
@@ -25,15 +26,21 @@ export default (data: DetailData) => {
 
   const DetailInfo = (
     <ul>
-      <li>Popis: 8 bytových domov</li>
-      <li>Podlažnosť: 4 až 7 podlaží</li>
-      <li>Nosný systém: stenový</li>
-      <li>Materál: železobetón</li>
+      {
+        props.descriptions.map((item: DescriptionItem) => {
+          return <li>{item.value}</li>
+        })
+      }
     </ul>
   );
 
   return (
     <Layout>
+      <Hero
+        title="Title"
+        subtitle="Subtitle"
+        fileName="bory.jpg"
+      />
       <Article
         content={DetailInfo}
         title="Popis"

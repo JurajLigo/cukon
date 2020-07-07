@@ -115,6 +115,9 @@ b
 24.6 1h30m - nacitavanie detailov projektov na hlavnej stranke dynamicky
 
 26.6 30m - pridanie obrazku dynamicky do nasej prace
+28.6 30m - pracovanie na detailu projektov
+
+7.7 - 1 hod - dynamicke loadovanie obrazku
 
 
 

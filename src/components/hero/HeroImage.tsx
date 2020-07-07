@@ -33,6 +33,7 @@ export const HeroImage = (props: HeroImageProps) => (
       });
       if (!image) { return null; }
       return (
+        // @ts-ignore
         <BackgroundImage fluid={image.node.childImageSharp.fluid} className="hero__background" />
       );
     }}
