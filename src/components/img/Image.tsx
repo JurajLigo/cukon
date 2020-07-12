@@ -29,7 +29,6 @@ export const Image = (props: ImageProps) => (
 
     render={(data) => {
       const image = data.images.edges.find(n => {
-        console.log('image ',n);
         return n.node.relativePath.includes(props.filename);
       });
       if (!image) { return null; }

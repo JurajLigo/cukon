@@ -13,37 +13,17 @@ import Pezinok3 from '../../images/pezinok/pezinok3.jpg'
 import Pezinok4 from '../../images/pezinok/pezinok4.jpg'
 import Pezinok5 from '../../images/pezinok/pezinok5.jpg'
 import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-export const MasonryGallery = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "pezinok" }
-      }
-    ) {
-      edges {
-        node {
-          base
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`)
-
+export const MasonryGallery = (props: any) => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  console.log('images ', data);
+  const {image} = props;
+  console.log('image as props', image);
+
 
   const openLightbox = useCallback((event, { photo, index }) => {
-    console.log('ahoj')
     setCurrentImage(index)
     setViewerIsOpen(true)
   }, [])
@@ -53,102 +33,75 @@ export const MasonryGallery = () => {
     setViewerIsOpen(false)
   }
 
+  const photosReal = [
+    {
+      file: image.node.childImageSharp.fluid,
+      src: image.node.childImageSharp.fluid.src,
+      width: image.node.childImageSharp.fluid.presentationWidth,
+      height: image.node.childImageSharp.fluid.presentationHeight,
+    },
+    {
+      file: image.node.childImageSharp.fluid,
+      src: image.node.childImageSharp.fluid.src,
+      width: image.node.childImageSharp.fluid.presentationWidth,
+      height: image.node.childImageSharp.fluid.presentationHeight,
+    },
+    {
+      file: image.node.childImageSharp.fluid,
+      src: image.node.childImageSharp.fluid.src,
+      width: image.node.childImageSharp.fluid.presentationWidth,
+      height: image.node.childImageSharp.fluid.presentationHeight,
+    }
+  ]
+
   const photos = [
     {
       file: 'pezinok/pezinok.jpg',
       src: Pezinok,
       width: 4,
-      height: 3,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 3
     },
     {
       file: 'pezinok/pezinok1.jpg',
       src: Pezinok1,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
     {
       file: 'pezinok/pezinok2.jpg',
       src: Pezinok2,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
     {
       file: 'pezinok/pezinok3.jpg',
       src: Pezinok3,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
     {
       file: 'pezinok/pezinok4.jpg',
       src: Pezinok4,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
     {
       file: 'pezinok/pezinok5.jpg',
       src: Pezinok5,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
     {
       file: 'pezinok/pezinok2.jpg',
       src: Pezinok2,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
     {
       file: 'pezinok/pezinok3.jpg',
       src: Pezinok3,
       width: 3,
-      height: 4,
-      srcSet: "\"/static/b40cdd794c6b40436b1601ce4636cbdf/d278e/pezinok4.jpg 200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/8539d/pezinok4.jpg 400w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/bc3a8/pezinok4.jpg 800w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/81ef8/pezinok4.jpg 1200w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/989b1/pezinok4.jpg 1600w,\n" +
-        "/static/b40cdd794c6b40436b1601ce4636cbdf/434a7/pezinok4.jpg 2736w\""
+      height: 4
     },
   ]
 
@@ -164,7 +117,7 @@ export const MasonryGallery = () => {
         onClick={e => openLightbox(e, { photo, index })}
         style={{ margin: '2px', height: photo.height, width: photo.width }}
       >
-        <Image filename={photo.file} classname={''} />
+        <Img fluid={image.node.childImageSharp.fluid}/>
       </div>
     ),
     []
@@ -174,7 +127,7 @@ export const MasonryGallery = () => {
     <div className="second-container gallery__container">
       <div className="gallery base-container">
         <h2 className="title title--article gallery__title">Fotogaleria</h2>
-        <Gallery photos={photos} renderImage={imageRenderer} />
+        <Gallery photos={photosReal} renderImage={imageRenderer} />
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>
@@ -182,10 +135,8 @@ export const MasonryGallery = () => {
                 components={{ FooterCount: CustomFooterCount }}
                 currentIndex={currentImage}
                 showImageCount={false}
-                views={photos.map(x => ({
-                  ...x,
-                  caption: 'Ahoj',
-                  srcSet: x.srcSet
+                views={photosReal.map(photo => ({
+                  ...photo,
                 }))}
               />
             </Modal>

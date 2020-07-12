@@ -1,58 +1,53 @@
 import * as React from 'react'
-import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 import { Article } from '../components/article/article'
 import { Hero } from '../components/hero/hero'
+import { MasonryGallery } from '../components/gallery/gallery'
 
 export interface DetailData {
   data: {
     detailsJson: {
-      name: string;
-      location: string;
-      video: string;
-      architect: string;
+      name: string
+      location: string
+      video: string
+      architect: string
       descriptions: DescriptionItem[]
     }
   }
 }
 
 export interface DescriptionItem {
-  value: string;
+  value: string
 }
 
 export default (data: DetailData) => {
+  const props = data.data.detailsJson
 
-  const props = data.data.detailsJson;
+  const images = data.data.allFile.edges[0];
+
+  console.log('DETAIL IMAGE' , images);
 
   const DetailInfo = (
     <ul>
-      {
-        props.descriptions.map((item: DescriptionItem) => {
-          return <li>{item.value}</li>
-        })
-      }
+      {props.descriptions.map((item: DescriptionItem) => {
+        return <li>{item.value}</li>
+      })}
     </ul>
-  );
+  )
 
   return (
     <Layout>
-      <Hero
-        title="Title"
-        subtitle="Subtitle"
-        fileName="bory.jpg"
-      />
-      <Article
-        content={DetailInfo}
-        title="Popis"
-        videoPath={props.video}
-      />
+      <Hero title="Title" subtitle="Subtitle" fileName="bory.jpg" />
+      <Article content={DetailInfo} title="Popis" videoPath={props.video} />
+      <MasonryGallery image={data.data.allFile.edges[0]} />
+
     </Layout>
   )
-};
-
+}
 
 export const query = graphql`
-  query($id: String!) {
+  query($id: String!, $resourceName: String!) {
     detailsJson(id: { eq: $id }) {  
       name
       location
@@ -62,4 +57,27 @@ export const query = graphql`
         value
       }
     }
+    allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: $resourceName }
+      }
+    ) {
+      edges {
+        node {
+          base
+          childImageSharp {
+            fluid {
+              base64
+              aspectRatio
+              presentationWidth
+              presentationHeight
+              src
+              srcSet
+              sizes
+            }
+          }
+        }
+      }
+    } 
   }`

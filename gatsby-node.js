@@ -26,8 +26,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-    console.log('JSON ', result);
-
     result.data.allDetailsJson.edges.forEach(({ node }) => {
         createPage({
             path: node.resourceName,
@@ -36,6 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.
                 id: node.id,
+                resourceName: node.resourceName
             },
         })
     })
