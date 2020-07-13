@@ -19,9 +19,7 @@ export const MasonryGallery = (props: any) => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const {image} = props;
-  console.log('image as props', image);
-
+  const {images} = props;
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index)
@@ -32,27 +30,6 @@ export const MasonryGallery = (props: any) => {
     setCurrentImage(0)
     setViewerIsOpen(false)
   }
-
-  const photosReal = [
-    {
-      file: image.node.childImageSharp.fluid,
-      src: image.node.childImageSharp.fluid.src,
-      width: image.node.childImageSharp.fluid.presentationWidth,
-      height: image.node.childImageSharp.fluid.presentationHeight,
-    },
-    {
-      file: image.node.childImageSharp.fluid,
-      src: image.node.childImageSharp.fluid.src,
-      width: image.node.childImageSharp.fluid.presentationWidth,
-      height: image.node.childImageSharp.fluid.presentationHeight,
-    },
-    {
-      file: image.node.childImageSharp.fluid,
-      src: image.node.childImageSharp.fluid.src,
-      width: image.node.childImageSharp.fluid.presentationWidth,
-      height: image.node.childImageSharp.fluid.presentationHeight,
-    }
-  ]
 
   const photos = [
     {
@@ -117,7 +94,7 @@ export const MasonryGallery = (props: any) => {
         onClick={e => openLightbox(e, { photo, index })}
         style={{ margin: '2px', height: photo.height, width: photo.width }}
       >
-        <Img fluid={image.node.childImageSharp.fluid}/>
+        <Img fluid={photo.file}/>
       </div>
     ),
     []
@@ -127,7 +104,7 @@ export const MasonryGallery = (props: any) => {
     <div className="second-container gallery__container">
       <div className="gallery base-container">
         <h2 className="title title--article gallery__title">Fotogaleria</h2>
-        <Gallery photos={photosReal} renderImage={imageRenderer} />
+        <Gallery photos={images} renderImage={imageRenderer} />
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox}>
@@ -135,7 +112,7 @@ export const MasonryGallery = (props: any) => {
                 components={{ FooterCount: CustomFooterCount }}
                 currentIndex={currentImage}
                 showImageCount={false}
-                views={photosReal.map(photo => ({
+                views={images.map(photo => ({
                   ...photo,
                 }))}
               />

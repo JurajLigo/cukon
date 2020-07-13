@@ -24,9 +24,9 @@ export interface DescriptionItem {
 export default (data: DetailData) => {
   const props = data.data.detailsJson
 
-  const images = data.data.allFile.edges[0];
+  const images = data.data.allFile.edges[0]
 
-  console.log('DETAIL IMAGE' , images);
+  console.log('DETAIL IMAGE', images)
 
   const DetailInfo = (
     <ul>
@@ -40,15 +40,16 @@ export default (data: DetailData) => {
     <Layout>
       <Hero title="Title" subtitle="Subtitle" fileName="bory.jpg" />
       <Article content={DetailInfo} title="Popis" videoPath={props.video} />
-      <MasonryGallery image={data.data.allFile.edges[0]} />
-
+      <MasonryGallery
+        images={transformToGalleryImages(data.data.allFile.edges)}
+      />
     </Layout>
   )
 }
 
 export const query = graphql`
   query($id: String!, $resourceName: String!) {
-    detailsJson(id: { eq: $id }) {  
+    detailsJson(id: { eq: $id }) {
       name
       location
       architect
@@ -79,5 +80,17 @@ export const query = graphql`
           }
         }
       }
-    } 
-  }`
+    }
+  }
+`
+
+const transformToGalleryImages = edges => {
+  return edges.map(edge => {
+    return {
+      file: edge.node.childImageSharp.fluid,
+      src: edge.node.childImageSharp.fluid.src,
+      width: edge.node.childImageSharp.fluid.presentationWidth,
+      height: edge.node.childImageSharp.fluid.presentationHeight,
+    }
+  })
+}

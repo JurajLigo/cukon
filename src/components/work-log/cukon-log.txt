@@ -121,6 +121,8 @@ b
 
 12.7 - 1 hod - nactianie obrazkov do galerie pomocou graphql
 
+13.7 - 30m - transformacia obrazkov pre galeriu aby sa zobrazili vsetky vo folderi
+
 
 
 
