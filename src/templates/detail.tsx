@@ -22,7 +22,7 @@ export interface DescriptionItem {
 }
 
 export default (data: DetailData) => {
-  const props = data.data.detailsJson
+  const texts = data.data.detailsJson
 
   const images = data.data.allFile.edges[0]
 
@@ -30,7 +30,7 @@ export default (data: DetailData) => {
 
   const DetailInfo = (
     <ul>
-      {props.descriptions.map((item: DescriptionItem) => {
+      {texts.descriptions.map((item: DescriptionItem) => {
         return <li>{item.value}</li>
       })}
     </ul>
@@ -38,8 +38,13 @@ export default (data: DetailData) => {
 
   return (
     <Layout>
-      <Hero title="Title" subtitle="Subtitle" fileName="bory.jpg" />
-      <Article content={DetailInfo} title="Popis" videoPath={props.video} />
+      <Hero
+        title={texts.name}
+        subtitle={texts.architect}
+        secondSubtitle={texts.location}
+        fileName="bory.jpg"
+      />
+      <Article content={DetailInfo} title="Popis" videoPath={texts.video} />
       <MasonryGallery
         images={transformToGalleryImages(data.data.allFile.edges)}
       />
