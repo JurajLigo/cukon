@@ -123,6 +123,10 @@ b
 
 13.7 - 30m - transformacia obrazkov pre galeriu aby sa zobrazili vsetky vo folderi
 
+14.7 - 30m - uprava hero textu na detaile
+
+15.7 - 30m - uprava fotogalerie
+
 
 
 

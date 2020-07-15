@@ -15,11 +15,15 @@ import Pezinok5 from '../../images/pezinok/pezinok5.jpg'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-export const MasonryGallery = (props: any) => {
+export interface MasonryGalleryProps {
+  name: string
+}
+
+export const MasonryGallery = (props: MasonryGalleryProps) => {
   const [currentImage, setCurrentImage] = useState(0)
   const [viewerIsOpen, setViewerIsOpen] = useState(false)
 
-  const {images} = props;
+  const {images, name} = props;
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index)
@@ -103,7 +107,7 @@ export const MasonryGallery = (props: any) => {
   return (
     <div className="second-container gallery__container">
       <div className="gallery base-container">
-        <h2 className="title title--article gallery__title">Fotogaleria</h2>
+        <h2 className="title title--article gallery__title">{name}</h2>
         <Gallery photos={images} renderImage={imageRenderer} />
         <ModalGateway>
           {viewerIsOpen ? (

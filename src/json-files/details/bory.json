@@ -4,7 +4,7 @@
   "name": "Bory bývanie 3. fáza",
   "location": "Lokalita: Bratislava",
   "architect": "Architekt: Sadovsky & Architects",
-  "imageForList": "bory.jpg",
+  "imageForList": "pezinok5.jpg",
   "video": "https://www.youtube.com/embed/6qN6ejdqEhc",
   "descriptions": [
     {
@@ -18,6 +18,12 @@
     },
     {
       "value": "Materál: železobetón"
+    }
+  ],
+  "galleries": [
+    {
+      "name": "gallery_1",
+      "value": "Fotogaleria 1"
     }
   ]
 }

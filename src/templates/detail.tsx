@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import { Article } from '../components/article/article'
 import { Hero } from '../components/hero/hero'
 import { MasonryGallery } from '../components/gallery/gallery'
+import { text } from '@fortawesome/fontawesome-svg-core'
 
 export interface DetailData {
   data: {
@@ -13,6 +14,7 @@ export interface DetailData {
       video: string
       architect: string
       descriptions: DescriptionItem[]
+      galleries: Gallery[]
     }
   }
 }
@@ -21,12 +23,13 @@ export interface DescriptionItem {
   value: string
 }
 
+export interface Gallery {
+  name: string
+  value: string
+}
+
 export default (data: DetailData) => {
   const texts = data.data.detailsJson
-
-  const images = data.data.allFile.edges[0]
-
-  console.log('DETAIL IMAGE', images)
 
   const DetailInfo = (
     <ul>
@@ -42,10 +45,11 @@ export default (data: DetailData) => {
         title={texts.name}
         subtitle={texts.architect}
         secondSubtitle={texts.location}
-        fileName="bory.jpg"
+        fileName="pezinok5.jpg"
       />
       <Article content={DetailInfo} title="Popis" videoPath={texts.video} />
       <MasonryGallery
+        name={texts.galleries[0].value}
         images={transformToGalleryImages(data.data.allFile.edges)}
       />
     </Layout>
@@ -60,6 +64,10 @@ export const query = graphql`
       architect
       video
       descriptions {
+        value
+      }
+      galleries {
+        name
         value
       }
     }
