@@ -1,11 +1,11 @@
 {
-  "resourceName": "bory-3-faza",
-  "year": "2020",
-  "date": "2020-01-01",
-  "name": "Bory bývanie 3. fáza",
-  "location": "Lokalita: Bratislava",
-  "architect": "Architekt: Sadovsky & Architects",
-  "imageForList": "gallery2-photo2.jpg",
+  "resourceName": "pezinok",
+  "year": "2021",
+  "date": "2029-05-01",
+  "name": "Pezinok",
+  "location": "Pezinok",
+  "architect": "Architekt: Pezinok",
+  "imageForList": "gallery1-pezinok.jpg",
   "video": "https://www.youtube.com/embed/6qN6ejdqEhc",
   "descriptions": [
     {
@@ -25,10 +25,6 @@
     {
       "name": "gallery1",
       "value": "Fotogaleria 1"
-    },
-    {
-      "name": "gallery2",
-      "value": "Fotogaleria 2"
     }
   ]
 }

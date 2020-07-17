@@ -5,13 +5,6 @@ import { Image } from '../img/Image'
 import { useCallback, useState } from 'react'
 
 import './gallery.scss'
-
-import Pezinok from '../../images/pezinok/pezinok.jpg'
-import Pezinok1 from '../../images/pezinok/pezinok1.jpg'
-import Pezinok2 from '../../images/pezinok/pezinok2.jpg'
-import Pezinok3 from '../../images/pezinok/pezinok3.jpg'
-import Pezinok4 from '../../images/pezinok/pezinok4.jpg'
-import Pezinok5 from '../../images/pezinok/pezinok5.jpg'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -34,57 +27,6 @@ export const MasonryGallery = (props: MasonryGalleryProps) => {
     setCurrentImage(0)
     setViewerIsOpen(false)
   }
-
-  const photos = [
-    {
-      file: 'pezinok/pezinok.jpg',
-      src: Pezinok,
-      width: 4,
-      height: 3
-    },
-    {
-      file: 'pezinok/pezinok1.jpg',
-      src: Pezinok1,
-      width: 3,
-      height: 4
-    },
-    {
-      file: 'pezinok/pezinok2.jpg',
-      src: Pezinok2,
-      width: 3,
-      height: 4
-    },
-    {
-      file: 'pezinok/pezinok3.jpg',
-      src: Pezinok3,
-      width: 3,
-      height: 4
-    },
-    {
-      file: 'pezinok/pezinok4.jpg',
-      src: Pezinok4,
-      width: 3,
-      height: 4
-    },
-    {
-      file: 'pezinok/pezinok5.jpg',
-      src: Pezinok5,
-      width: 3,
-      height: 4
-    },
-    {
-      file: 'pezinok/pezinok2.jpg',
-      src: Pezinok2,
-      width: 3,
-      height: 4
-    },
-    {
-      file: 'pezinok/pezinok3.jpg',
-      src: Pezinok3,
-      width: 3,
-      height: 4
-    },
-  ]
 
   const CustomFooterCount = ({ currentIndex, views }) => (
     <div>

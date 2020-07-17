@@ -48,10 +48,12 @@ export default (data: DetailData) => {
         fileName="pezinok5.jpg"
       />
       <Article content={DetailInfo} title="Popis" videoPath={texts.video} />
-      <MasonryGallery
-        name={texts.galleries[0].value}
-        images={transformToGalleryImages(data.data.allFile.edges)}
-      />
+      {texts.galleries.map((gallery: Gallery) => (
+        <MasonryGallery
+          name={gallery.value}
+          images={transformToGalleryImages(data.data.allFile.edges, gallery.name)}
+        />
+      ))}
     </Layout>
   )
 }
@@ -97,8 +99,10 @@ export const query = graphql`
   }
 `
 
-const transformToGalleryImages = edges => {
-  return edges.map(edge => {
+const transformToGalleryImages = (edges, name) => {
+  return edges
+    .filter(edge => edge.node.childImageSharp.fluid.src.indexOf(name) != -1)
+    .map(edge => {
     return {
       file: edge.node.childImageSharp.fluid,
       src: edge.node.childImageSharp.fluid.src,
