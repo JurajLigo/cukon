@@ -130,6 +130,8 @@ b
 17.7 - 1h - fotogalerie komplet dynamicke
        30m - vymazanie nepotrebnosti
 
+19.7 - 1h - 1h responsivnost pre work items
+
 
 
 
