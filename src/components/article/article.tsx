@@ -22,7 +22,7 @@ export const Article = (props: ArticleProps) => {
       </div>
       <div className="article__text-wrapper">
         <h2 className="title title--article">{props.title}</h2>
-        <p>{props.content}</p>
+        <div>{props.content}</div>
       </div>
     </article>
   )

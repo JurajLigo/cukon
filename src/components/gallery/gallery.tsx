@@ -37,6 +37,7 @@ export const MasonryGallery = (props: MasonryGalleryProps) => {
   const imageRenderer = useCallback(
     ({ index, left, top, key, photo, onClick }) => (
       <div
+        key={index}
         onClick={e => openLightbox(e, { photo, index })}
         style={{ margin: '2px', height: photo.height, width: photo.width }}
       >

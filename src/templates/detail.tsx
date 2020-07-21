@@ -33,8 +33,8 @@ export default (data: DetailData) => {
 
   const DetailInfo = (
     <ul>
-      {texts.descriptions.map((item: DescriptionItem) => {
-        return <li>{item.value}</li>
+      {texts.descriptions.map((item: DescriptionItem, index: number) => {
+        return <li key={index}>{item.value}</li>
       })}
     </ul>
   )
@@ -48,8 +48,9 @@ export default (data: DetailData) => {
         fileName="pezinok5.jpg"
       />
       <Article content={DetailInfo} title="Popis" videoPath={texts.video} />
-      {texts.galleries.map((gallery: Gallery) => (
+      {texts.galleries.map((gallery: Gallery, index: number) => (
         <MasonryGallery
+          key={index}
           name={gallery.value}
           images={transformToGalleryImages(data.data.allFile.edges, gallery.name)}
         />
