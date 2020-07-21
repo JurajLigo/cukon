@@ -5,6 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  min-height: 25rem;
 
   @media screen and (max-width: $mobile) {
     flex-wrap: wrap;
