@@ -30,5 +30,9 @@
       "name": "gallery2",
       "value": "Fotogaleria 2"
     }
-  ]
+  ],
+  "seo":  {
+    "title": "",
+    "description": ""
+  }
 }

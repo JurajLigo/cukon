@@ -26,5 +26,9 @@
       "name": "gallery1",
       "value": "Fotogaleria 1"
     }
-  ]
+  ],
+  "seo":  {
+    "title": "AHOJ TITLE",
+    "description": "AHOJ DESCRIPTION"
+  }
 }

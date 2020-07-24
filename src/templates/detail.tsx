@@ -4,7 +4,8 @@ import Layout from '../components/layout'
 import { Article } from '../components/article/article'
 import { Hero } from '../components/hero/hero'
 import { MasonryGallery } from '../components/gallery/gallery'
-import { text } from '@fortawesome/fontawesome-svg-core'
+import SEO from '../components/seo'
+import { text } from "@fortawesome/fontawesome-svg-core"
 
 export interface DetailData {
   data: {
@@ -14,13 +15,19 @@ export interface DetailData {
       video: string
       architect: string
       descriptions: DescriptionItem[]
-      galleries: Gallery[]
+      galleries: Gallery[],
+      seo: SeoData;
     }
   }
 }
 
 export interface DescriptionItem {
   value: string
+}
+
+export interface SeoData {
+  title: string;
+  description: string;
 }
 
 export interface Gallery {
@@ -41,6 +48,7 @@ export default (data: DetailData) => {
 
   return (
     <Layout>
+      <SEO title={texts.seo.title} description={texts.seo.description}/>
       <Hero
         title={texts.name}
         subtitle={texts.architect}
@@ -72,6 +80,10 @@ export const query = graphql`
       galleries {
         name
         value
+      }
+      seo {
+        title
+        description
       }
     }
     allFile(

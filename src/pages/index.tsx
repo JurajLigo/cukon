@@ -22,7 +22,6 @@ export interface MainPageData {
 }
 
 export interface MainPageJsonData {
-  seo: string
   hero: {
     title: string
     subtitle: string
@@ -51,7 +50,6 @@ const IndexPage = () => {
         }
       }
       mainPageJson {
-        seo
         hero {
           title
           subtitle
@@ -66,7 +64,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title={data.mainPageJson.seo} />
+      <SEO />
       <>
         <Hero
           title={data.mainPageJson.hero.title}
