@@ -72,13 +72,13 @@ const IndexPage = () => {
           image={data.heroPhoto.childImageSharp.fluid}
         />
         <div id="about-us"></div>
-          <Article
-            title={data.mainPageJson.aboutUs.title}
-            image={data.teamImage.childImageSharp.fluid}
-            content={data.mainPageJson.aboutUs.text}
-          />
+        <Article
+          title={data.mainPageJson.aboutUs.title}
+          image={data.teamImage.childImageSharp.fluid}
+          content={data.mainPageJson.aboutUs.text}
+        />
         <div id="our-work"></div>
-          <Work />
+        <Work />
       </>
     </Layout>
   )

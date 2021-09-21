@@ -27,24 +27,24 @@ export interface ContactData {
 
 export interface ContactTextData {
   contact: {
-    title: string;
-    name: string;
-    phone: string;
-    email: string;
+    title: string
+    name: string
+    phone: string
+    email: string
   }
   office: {
-    title: string;
-    name: string;
-    address: string;
-    floor: string;
+    title: string
+    name: string
+    address: string
+    floor: string
   }
   invoice: {
-    title: string;
-    name: string;
-    address: string;
-    ico: string;
-    dic: string;
-    icdph: string;
+    title: string
+    name: string
+    address: string
+    ico: string
+    dic: string
+    icdph: string
   }
   copyright: string
 }
@@ -107,16 +107,16 @@ export const Contact = () => {
       <footer className="footer__content">
         <div className="footer__contact">
           <h3 className="footer__content-title">
-            <FontAwesomeIcon
-              className="footer__icon"
-              icon="phone"
-              size="1x"
-            />
+            <FontAwesomeIcon className="footer__icon" icon="phone" size="1x" />
             {data.contactJson.contact.title}
           </h3>
           <p className="base-content">{data.contactJson.contact.name}</p>
           <p className="base-content">{data.contactJson.contact.phone}</p>
           <p className="base-content">{data.contactJson.contact.email}</p>
+          <br />
+          <p className="base-content">Ing. Peter Čuhák</p>
+          <p className="base-content">+421 949 370 903</p>
+          <p className="base-content">peter@cukon.sk</p>
         </div>
         <div className="footer__office">
           <h3 className="footer__content-title">

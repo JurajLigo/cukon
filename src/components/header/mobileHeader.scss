@@ -1,4 +1,4 @@
-@import ".././variable";
+@import '.././variable';
 
 .mobile-header {
   position: fixed;
@@ -23,7 +23,6 @@
   }
 
   &__logo {
-
   }
 
   &__title {
@@ -40,7 +39,7 @@
 
   &__navigation-icon {
     z-index: 3;
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 }
 
@@ -55,7 +54,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: -2px 0px 12px 1px $darkgrey;
-  transition: right .5s, box-shadow 1s;
+  transition: right 0.5s, box-shadow 1s;
 
   &--hide {
     right: -300px;
