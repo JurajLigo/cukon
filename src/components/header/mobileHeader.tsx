@@ -19,7 +19,7 @@ export const MobileHeader = () => {
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(height: 40, width: 40) {
+          fixed(height: 60, width: 60) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -75,17 +75,29 @@ export const MobileHeader = () => {
       <nav className={navigationCls}>
         <ul className="mobile-navigation__list">
           <li className="mobile-navigation__item">
-            <Link className="navigation__item" to="/#about-us" onClick={menuClick}>
+            <Link
+              className="navigation__item"
+              to="/#about-us"
+              onClick={menuClick}
+            >
               {data.headerJson.menuItems.aboutUs}
             </Link>
           </li>
           <li className="mobile-navigation__item">
-            <Link className="navigation__item" to="/#our-work" onClick={menuClick}>
+            <Link
+              className="navigation__item"
+              to="/#our-work"
+              onClick={menuClick}
+            >
               {data.headerJson.menuItems.ourWork}
             </Link>
           </li>
           <li className="mobile-navigation__item">
-            <Link className="navigation__item" to="/#contact" onClick={menuClick}>
+            <Link
+              className="navigation__item"
+              to="/#contact"
+              onClick={menuClick}
+            >
               {data.headerJson.menuItems.contact}
             </Link>
           </li>

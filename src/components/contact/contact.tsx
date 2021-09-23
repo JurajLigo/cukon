@@ -57,9 +57,9 @@ export const Contact = () => {
           title
         }
       }
-      logoFooter: file(relativePath: { eq: "contact/logo-footer.png" }) {
+      logoFooter: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(height: 30, width: 30) {
+          fixed(height: 50, width: 50) {
             ...GatsbyImageSharpFixed
           }
         }

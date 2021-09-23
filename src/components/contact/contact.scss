@@ -1,4 +1,4 @@
-@import ".././variable";
+@import '.././variable';
 
 .footer {
   margin-top: 8rem;
@@ -20,11 +20,12 @@
 
   &__logo-image {
     vertical-align: bottom;
+    top: 7px;
   }
 
   &__logo-title {
     margin: 0;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     display: inline;
     font-family: 'Audiowide', cursive;
     font-size: 2.5rem;
@@ -45,6 +46,6 @@
   }
 
   &__icon {
-    margin-right: .6rem;
+    margin-right: 0.6rem;
   }
 }

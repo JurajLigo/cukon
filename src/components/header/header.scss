@@ -1,4 +1,4 @@
-@import ".././variable";
+@import '.././variable';
 
 .header {
   position: fixed;
@@ -29,7 +29,7 @@
   }
 
   &__title {
-    margin: 0 0 0 1rem;
+    margin: 0;
     font-size: 3.5rem;
     position: relative;
     color: black;
@@ -45,7 +45,7 @@
   margin-right: 2rem;
   font-size: 1.8rem;
   text-transform: uppercase;
-  letter-spacing: .25rem;
+  letter-spacing: 0.25rem;
 
   &__item {
     margin: 0;

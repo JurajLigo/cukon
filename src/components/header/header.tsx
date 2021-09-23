@@ -35,7 +35,7 @@ export const Header = () => {
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(height: 50, width: 50) {
+          fixed(height: 70, width: 70) {
             ...GatsbyImageSharpFixed
           }
         }
