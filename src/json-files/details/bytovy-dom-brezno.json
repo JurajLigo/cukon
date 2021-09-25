@@ -1,0 +1,31 @@
+{
+  "resourceName": "bytovy-dom-brezno",
+  "year": "2019",
+  "date": "2019-01-01",
+  "name": "Bytový dom Brezno",
+  "location": "Lokalita: Brezno",
+  "heroImage": "gallery-brezno1.JPG",
+  "architect": "Architekt: Ing. Pavol Kubiš",
+  "imageForList": "gallery-brezno1.JPG",
+  "descriptions": [
+    {
+      "value": "Podlažnosť: 3 nadzemné podlažia"
+    },
+    {
+      "value": "Nosný systém: stenový"
+    },
+    {
+      "value": "Materiál: železobetón, tvárnice ytong, drevo"
+    }
+  ],
+  "galleries": [
+    {
+      "name": "gallery",
+      "value": "Fotogaleria"
+    }
+  ],
+  "seo":  {
+    "title": "",
+    "description": ""
+  }
+}

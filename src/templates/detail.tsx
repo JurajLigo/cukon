@@ -5,7 +5,7 @@ import { Article } from '../components/article/article'
 import { Hero } from '../components/hero/hero'
 import { MasonryGallery } from '../components/gallery/gallery'
 import SEO from '../components/seo'
-import { text } from "@fortawesome/fontawesome-svg-core"
+import { text } from '@fortawesome/fontawesome-svg-core'
 
 export interface DetailData {
   data: {
@@ -14,9 +14,10 @@ export interface DetailData {
       location: string
       video: string
       architect: string
+      heroImage: string
       descriptions: DescriptionItem[]
-      galleries: Gallery[],
-      seo: SeoData;
+      galleries: Gallery[]
+      seo: SeoData
     }
   }
 }
@@ -26,8 +27,8 @@ export interface DescriptionItem {
 }
 
 export interface SeoData {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 
 export interface Gallery {
@@ -48,19 +49,22 @@ export default (data: DetailData) => {
 
   return (
     <Layout>
-      <SEO title={texts.seo.title} description={texts.seo.description}/>
+      <SEO title={texts.seo.title} description={texts.seo.description} />
       <Hero
         title={texts.name}
         subtitle={texts.architect}
         secondSubtitle={texts.location}
-        fileName="pezinok5.jpg"
+        fileName={texts.heroImage}
       />
       <Article content={DetailInfo} title="Popis" videoPath={texts.video} />
       {texts.galleries.map((gallery: Gallery, index: number) => (
         <MasonryGallery
           key={index}
           name={gallery.value}
-          images={transformToGalleryImages(data.data.allFile.edges, gallery.name)}
+          images={transformToGalleryImages(
+            data.data.allFile.edges,
+            gallery.name
+          )}
         />
       ))}
     </Layout>
@@ -74,6 +78,7 @@ export const query = graphql`
       location
       architect
       video
+      heroImage
       descriptions {
         value
       }
@@ -116,11 +121,11 @@ const transformToGalleryImages = (edges, name) => {
   return edges
     .filter(edge => edge.node.childImageSharp.fluid.src.indexOf(name) != -1)
     .map(edge => {
-    return {
-      file: edge.node.childImageSharp.fluid,
-      src: edge.node.childImageSharp.fluid.src,
-      width: edge.node.childImageSharp.fluid.presentationWidth,
-      height: edge.node.childImageSharp.fluid.presentationHeight,
-    }
-  })
+      return {
+        file: edge.node.childImageSharp.fluid,
+        src: edge.node.childImageSharp.fluid.src,
+        width: edge.node.childImageSharp.fluid.presentationWidth,
+        height: edge.node.childImageSharp.fluid.presentationHeight,
+      }
+    })
 }
