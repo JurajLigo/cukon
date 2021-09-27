@@ -35,7 +35,7 @@ export interface WorkItemDetail {
 const Work = () => {
   const workItems: WorkData = useStaticQuery(graphql`
     query {
-      allDetailsJson {
+      allDetailsJson(sort: { fields: date, order: DESC }) {
         edges {
           node {
             id
