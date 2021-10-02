@@ -1,0 +1,31 @@
+{
+    "resourceName": "rekreacna-chata-myto-pod-dumbierom",
+    "year": "2019",
+    "date": "2019-01-01",
+    "name": "Rekreačná chata Mýto pod Ďumbierom",
+    "location": "Lokalita: Mýto pod Ďumbierom",
+    "heroImage": "gallery-dumbier.jpg",
+    "architect": "Architekt: Ing. Pavol Kubiš",
+    "imageForList": "gallery-dumbier.jpg",
+    "descriptions": [
+      {
+        "value": "Podlažnosť: 2 nadzemné podlažia, 1 podzemné podlažie"
+      },
+      {
+        "value": "Nosný systém: stenový"
+      },
+      {
+        "value": "Materiál: železobetón, tvárnice porotherm, drevo"
+      }
+    ],
+    "galleries": [
+      {
+        "name": "gallery",
+        "value": "Fotogáleria"
+      }
+    ],
+    "seo":  {
+      "title": "",
+      "description": ""
+    }
+  }

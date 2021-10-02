@@ -1,0 +1,34 @@
+{
+    "resourceName": "ab-zilina",
+    "year": "2020",
+    "date": "2020-01-01",
+    "name": "AB Žilina",
+    "location": "Lokalita: Žilina",
+    "heroImage": "gallery-ab-zilina1.JPG",
+    "architect": "Architekt: ENDORFINE, s.r.o.",
+    "imageForList": "gallery-ab-zilina1.JPG",
+    "descriptions": [
+      {
+        "value": "Popis: Administratívny objekt"
+      },
+      {
+        "value": "Podlažnosť: 9 nadzemných podlaží, 1 podzemné podlažie"
+      },
+      {
+        "value": "Nosný systém: skeletový nosný systém"
+      },
+      {
+        "value": "Administratívny objekt má 9 nadzemných podlaží z toho jedno ustúpené a 1 podzemné podlažie. Podzemné podlažie má celkové rozmery 104,35 x 32,8m. Objekt pozostáva zo skeletového nosného systému doplnený tromi stužujúcimi jadrami, v ktorom sú umiestnené výťahové šachty a schodiská."
+      }
+    ],
+    "galleries": [
+      {
+        "name": "gallery",
+        "value": "Fotogáleria"
+      }
+    ],
+    "seo":  {
+      "title": "",
+      "description": ""
+    }
+  }
