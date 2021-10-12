@@ -1,0 +1,46 @@
+@import '.././variable';
+
+.about-us {
+  margin-top: 8rem;
+  padding-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  min-height: 25rem;
+
+  @media screen and (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
+
+  &__paragraph {
+    margin: 1rem 0;
+  }
+
+  &__image-wrapper {
+    width: 50%;
+    padding-right: 6rem;
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+      padding: 0;
+      order: 2;
+    }
+  }
+
+  &__image {
+    border-radius: 1rem;
+  }
+
+  &__text-wrapper {
+    width: 50%;
+    font-size: 1.75rem;
+
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+      order: 1;
+      margin-top: 1rem;
+    }
+  }
+}

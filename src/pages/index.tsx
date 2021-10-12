@@ -6,6 +6,7 @@ import { Hero } from '../components/hero/hero'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 import Work from '../components/work/work'
+import { AboutUs } from '../components/aboutUs/aboutUs'
 
 export interface MainPageData {
   teamImage: {
@@ -72,10 +73,9 @@ const IndexPage = () => {
           image={data.heroPhoto.childImageSharp.fluid}
         />
         <div id="about-us"></div>
-        <Article
+        <AboutUs
           title={data.mainPageJson.aboutUs.title}
           image={data.teamImage.childImageSharp.fluid}
-          content={data.mainPageJson.aboutUs.text}
         />
         <div id="our-work"></div>
         <Work />
