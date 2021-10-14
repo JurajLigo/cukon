@@ -77,7 +77,6 @@ export const query = graphql`
       name
       location
       architect
-      video
       heroImage
       descriptions {
         value

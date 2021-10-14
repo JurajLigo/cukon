@@ -1,0 +1,35 @@
+{
+    "resourceName": "bory-3-faza",
+    "year": "2021",
+    "date": "2021-01-01",
+    "name": "Bory bývanie 3. fáza",
+    "location": "Lokalita: Bratislava",
+    "heroImage": "gallery2-00.jpg",
+    "architect": "Architekt: Sadovsky & Architects",
+    "imageForList": "gallery2-A1_0.jpg",
+    "descriptions": [
+      {
+        "value": "Podlažnosť: 4 až 7 podlaží"
+      },
+      {
+        "value": "Nosný systém: stenový"
+      },
+      {
+        "value": "Materiál: železobetón"
+      }
+    ],
+    "galleries": [
+      {
+        "name": "gallery1",
+        "value": "Fotogaleria PROJEKTOVANIE"
+      },
+      {
+        "name": "gallery2",
+        "value": "Fotogaleria REALIZÁCIA"
+      }
+    ],
+    "seo":  {
+      "title": " Bory home 3, bytový komplex ",
+      "description": "Projektovanie v BIM, BIM projekt Bory home 3, BIM vystužovanie, železobetón, optimalizácia výstuže, autor Vallo Sadovsky Architects "
+    }
+  }

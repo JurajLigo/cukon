@@ -59,7 +59,7 @@ const Work = () => {
   return (
     <div className="work">
       <h2 className="title title--article title--center">Naša práca</h2>
-      <VerticalTimeline>
+      <VerticalTimeline animate={false}>
         {workItems.allDetailsJson.edges.map((node: NodeData) => (
           <WorkItem
             year={node.node.year}
