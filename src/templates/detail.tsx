@@ -6,6 +6,7 @@ import { Hero } from '../components/hero/hero'
 import { MasonryGallery } from '../components/gallery/gallery'
 import SEO from '../components/seo'
 import { text } from '@fortawesome/fontawesome-svg-core'
+import { WorkDescription } from '../components/work/workDescription'
 
 export interface DetailData {
   data: {
@@ -24,6 +25,7 @@ export interface DetailData {
 
 export interface DescriptionItem {
   value: string
+  label: string
 }
 
 export interface SeoData {
@@ -56,7 +58,7 @@ export default (data: DetailData) => {
         secondSubtitle={texts.location}
         fileName={texts.heroImage}
       />
-      <Article content={DetailInfo} title="Popis" videoPath={texts.video} />
+      <WorkDescription title="Popis" descriptions={texts.descriptions} />
       {texts.galleries.map((gallery: Gallery, index: number) => (
         <MasonryGallery
           key={index}
@@ -79,6 +81,7 @@ export const query = graphql`
       architect
       heroImage
       descriptions {
+        label
         value
       }
       galleries {

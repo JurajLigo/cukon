@@ -1,0 +1,33 @@
+@import '.././variable';
+
+.work-description {
+  margin-top: 1.5rem;
+  padding: 5rem 0;
+
+  &__table {
+    padding-top: 2rem;
+    font-size: 2.2rem;
+    width: 100%;
+
+    tr:nth-child(odd) {
+      background: #f0f0f0;
+    }
+
+    td {
+      padding: 2rem;
+
+      &:first-child {
+        width: 30%;
+
+        @media screen and (max-width: $mobile) {
+          width: auto;
+        }
+      }
+
+      @media screen and (max-width: $mobile) {
+        display: block;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}

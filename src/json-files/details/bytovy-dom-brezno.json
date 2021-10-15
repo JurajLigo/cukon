@@ -9,13 +9,16 @@
   "imageForList": "gallery-brezno1.JPG",
   "descriptions": [
     {
-      "value": "Podlažnosť: 3 nadzemné podlažia"
+      "value": "3 nadzemné podlažia",
+      "label": "Podlažnosť"
     },
     {
-      "value": "Nosný systém: stenový"
+      "value": "stenový",
+      "label": "Nosný systém"
     },
     {
-      "value": "Materiál: železobetón, tvárnice ytong, drevo"
+      "value": "železobetón, tvárnice ytong, drevo",
+      "label": "Materiál"
     }
   ],
   "galleries": [

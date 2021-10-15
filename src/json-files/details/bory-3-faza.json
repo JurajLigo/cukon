@@ -9,23 +9,26 @@
     "imageForList": "gallery2-A1_0.jpg",
     "descriptions": [
       {
-        "value": "Podlažnosť: 4 až 7 podlaží"
+        "value": "4 až 7 podlaží",
+        "label": "Podlažnosť"
       },
       {
-        "value": "Nosný systém: stenový"
+        "value": "stenový",
+        "label": "Nosný systém"
       },
       {
-        "value": "Materiál: železobetón"
+        "value": "železobetón",
+        "label": "Materiál"
       }
     ],
     "galleries": [
       {
         "name": "gallery1",
-        "value": "Fotogaleria PROJEKTOVANIE"
+        "value": "Fotogaléria PROJEKTOVANIE"
       },
       {
         "name": "gallery2",
-        "value": "Fotogaleria REALIZÁCIA"
+        "value": "Fotogaléria REALIZÁCIA"
       }
     ],
     "seo":  {

@@ -9,22 +9,26 @@
     "imageForList": "gallery-ab-zilina1.JPG",
     "descriptions": [
       {
-        "value": "Popis: Administratívny objekt"
+        "value": "Administratívny objekt",
+        "label": "Typ"
       },
       {
-        "value": "Podlažnosť: 9 nadzemných podlaží, 1 podzemné podlažie"
+        "value": "9 nadzemných podlaží, 1 podzemné podlažie",
+        "label": "Podlažnosť"
       },
       {
-        "value": "Nosný systém: skeletový nosný systém"
+        "value": "skeletový nosný systém",
+        "label": "Nosný systém"
       },
       {
-        "value": "Administratívny objekt má 9 nadzemných podlaží z toho jedno ustúpené a 1 podzemné podlažie. Podzemné podlažie má celkové rozmery 104,35 x 32,8m. Objekt pozostáva zo skeletového nosného systému doplnený tromi stužujúcimi jadrami, v ktorom sú umiestnené výťahové šachty a schodiská."
+        "value": "Administratívny objekt má 9 nadzemných podlaží z toho jedno ustúpené a 1 podzemné podlažie. Podzemné podlažie má celkové rozmery 104,35 x 32,8m. Objekt pozostáva zo skeletového nosného systému doplnený tromi stužujúcimi jadrami, v ktorom sú umiestnené výťahové šachty a schodiská.",
+        "label": "Popis"
       }
     ],
     "galleries": [
       {
         "name": "gallery",
-        "value": "Fotogáleria"
+        "value": "Fotogaléria"
       }
     ],
     "seo":  {

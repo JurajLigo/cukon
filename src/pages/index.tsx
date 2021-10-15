@@ -36,7 +36,7 @@ export interface MainPageJsonData {
 const IndexPage = () => {
   const data: MainPageData = useStaticQuery(graphql`
     query {
-      teamImage: file(relativePath: { eq: "mainPage/team.jpg" }) {
+      teamImage: file(relativePath: { eq: "mainPage/fantagiro2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid

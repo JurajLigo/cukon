@@ -9,19 +9,22 @@
     "imageForList": "gallery-dumbier.jpg",
     "descriptions": [
       {
-        "value": "Podlažnosť: 2 nadzemné podlažia, 1 podzemné podlažie"
+        "value": "2 nadzemné podlažia, 1 podzemné podlažie",
+        "label": "Podlažnosť"
       },
       {
-        "value": "Nosný systém: stenový"
+        "value": "stenový",
+        "label": "Nosný systém"
       },
       {
-        "value": "Materiál: železobetón, tvárnice porotherm, drevo"
+        "value": "železobetón, tvárnice porotherm, drevo",
+        "label": "Materiál"
       }
     ],
     "galleries": [
       {
         "name": "gallery",
-        "value": "Fotogáleria"
+        "value": "Fotogaléria"
       }
     ],
     "seo":  {
