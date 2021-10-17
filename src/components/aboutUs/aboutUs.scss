@@ -11,6 +11,7 @@
   min-height: 25rem;
 
   @media screen and (max-width: $mobile) {
+    margin-top: 5rem;
     flex-wrap: wrap;
   }
 

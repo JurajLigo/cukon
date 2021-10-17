@@ -9,6 +9,10 @@
     "imageForList": "gallery2-A1_0.jpg",
     "descriptions": [
       {
+        "value": "8 bytových domov",
+        "label": "Počet objektov"
+      },
+      {
         "value": "4 až 7 podlaží",
         "label": "Podlažnosť"
       },
