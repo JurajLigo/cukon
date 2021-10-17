@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { FluidObject } from 'gatsby-image'
 import Work from '../components/work/work'
 import { AboutUs } from '../components/aboutUs/aboutUs'
+import { setUncaughtExceptionCaptureCallback } from 'process'
 
 export interface MainPageData {
   teamImage: {
@@ -65,7 +66,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title="Cukon -statika, projekčná činnosť" />
       <>
         <Hero
           title={data.mainPageJson.hero.title}
