@@ -98,6 +98,7 @@ export const query = graphql`
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }
         relativeDirectory: { eq: $resourceName }
       }
+      sort: { fields: childrenImageSharp___fixed___originalName, order: ASC }
     ) {
       edges {
         node {
