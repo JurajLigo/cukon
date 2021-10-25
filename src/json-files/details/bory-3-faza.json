@@ -4,7 +4,7 @@
     "date": "2021-01-01",
     "name": "Bory bývanie 3. fáza",
     "location": "Lokalita: Bratislava",
-    "heroImage": "gallery2-00.jpg",
+    "heroImage": "gallery2-5.jpg",
     "architect": "Architekt: Sadovsky & Architects",
     "imageForList": "gallery2-A1_0.jpg",
     "descriptions": [
@@ -27,12 +27,8 @@
     ],
     "galleries": [
       {
-        "name": "gallery1",
-        "value": "Fotogaléria PROJEKTOVANIE"
-      },
-      {
         "name": "gallery2",
-        "value": "Fotogaléria REALIZÁCIA"
+        "value": "Fotogaléria"
       }
     ],
     "seo":  {
