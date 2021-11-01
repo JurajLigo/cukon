@@ -24,11 +24,11 @@
   "galleries": [
     {
       "name": "gallery",
-      "value": "Fotogaleria"
+      "value": "Fotogaléria"
     }
   ],
   "seo":  {
-    "title": "",
-    "description": ""
+    "title": "Bytovy dom Brezno",
+    "description": "Statika pre bytovy dom Brezno"
   }
 }

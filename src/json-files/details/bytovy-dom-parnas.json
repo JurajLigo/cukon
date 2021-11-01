@@ -1,0 +1,35 @@
+{
+  "resourceName": "bytovy-dom-parnas",
+  "year": "2020",
+  "date": "2020-12-01",
+  "name": "Bytový dom B2 - Parnas",
+  "location": "Lokalita: Biely Kostol",
+  "heroImage": "gallery1-9.jpg",
+  "architect": "Architekt: Ing. Kocka Erik, Ing. Arch. Matúš Kollár",
+  "imageForList": "gallery1-1.jpg",
+  "descriptions": [
+    {
+      "label": "Podlažnosť",
+      "value": "4 podlažia"
+    },
+    {
+      "label": "Nosný systém",
+      "value": "stenový"
+    },
+    {
+      "label": "Materiál",
+      "value": "železobetón, porotherm"
+    }
+  ],
+  "galleries": [
+    {
+      "name": "gallery1",
+      "value": "Fotogaleria"
+    }
+    
+  ],
+  "seo":  {
+    "title": " Bytový dom B2 - Parnas ",
+    "description": "Projektovanie v BIM, BIM projekt Bytový dom Biely Kostol, BIM vystužovanie, železobetón, optimalizácia výstuže, autor Ing. Kocka Erik, Ing. Arch. Matúš Kollár "
+  }
+}
